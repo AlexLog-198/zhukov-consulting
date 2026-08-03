@@ -134,7 +134,18 @@
         .event-card-play { width: 48px; height: 48px; background: rgba(233, 69, 96, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 1.2rem; color: var(--color-highlight); transition: var(--transition); }
         .event-card:hover .event-card-play { background: var(--color-highlight); color: #fff; }
         .event-card h3 { font-size: 1rem; font-weight: 600; line-height: 1.5; }
+a.event-card {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
 
+a.event-card:hover h3 {
+    color: var(--color-highlight);
+}
+        
         /* AUTHOR */
         .author-section { background: var(--color-dark); }
         .author-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 60px 48px; text-align: center; max-width: 700px; margin: 0 auto; }
@@ -514,26 +525,31 @@
             <span class="section-label fade-in">Профессиональная среда</span>
             <h2 class="section-title fade-in">Выступления и интервью</h2>
             <div class="events-grid">
-                <div class="event-card fade-in">
-                    <div class="event-card-play">▶</div>
-                    <h3>XI SCM Конгресс руководителей цепей поставок</h3>
-                </div>
-                <div class="event-card fade-in">
-                    <div class="event-card-play">▶</div>
-                    <h3>Член большого совета Премии «Большой Оборот 2023»</h3>
-                </div>
-                <div class="event-card fade-in">
-                    <div class="event-card-play">▶</div>
-                    <h3>CeMAT Russia — международная выставка складской техники</h3>
-                </div>
-                <div class="event-card fade-in">
-                    <div class="event-card-play">▶</div>
-                    <h3>XII SCM Конгресс руководителей цепей поставок</h3>
-                </div>
-                <div class="event-card fade-in">
-                    <div class="event-card-play">▶</div>
-                    <h3>Работа склада селлера с маркетплейсами: точки роста и подводные камни</h3>
-                </div>
+    <a href="https://scmpro.ru/novostdetalno_4_138/?ysclid=mpfa1gyk8x452173139" class="event-card fade-in" target="_blank" rel="noopener">
+        <div class="event-card-play">▶</div>
+        <h3>XI SCM Конгресс руководителей цепей поставок</h3>
+    </a>
+    
+    <a href="https://conf.oborot.ru/archive/2023/award.html?ysclid=mpfa2s102m429876615" class="event-card fade-in" target="_blank" rel="noopener">
+        <div class="event-card-play">▶</div>
+        <h3>Член большого совета Премии «Большой Оборот 2023»</h3>
+    </a>
+    
+    <a href="https://www.cemat-russia.ru/" class="event-card fade-in" target="_blank" rel="noopener">
+        <div class="event-card-play">▶</div>
+        <h3>CeMAT Russia — международная выставка складской техники</h3>
+    </a>
+    
+    <a href="https://scmpro.ru/12_scm_congress/" class="event-card fade-in" target="_blank" rel="noopener">
+        <div class="event-card-play">▶</div>
+        <h3>XII SCM Конгресс руководителей цепей поставок</h3>
+    </a>
+    
+    <a href="https://sim.oborot.ru/archive/2025/?oid=408293&cid=223494&sid=1647" class="event-card fade-in" target="_blank" rel="noopener">
+        <div class="event-card-play">▶</div>
+        <h3>Работа склада селлера с маркетплейсами: точки роста и подводные камни</h3>
+    </a>
+</div>    </div>
             </div>
         </div>
     </section>
