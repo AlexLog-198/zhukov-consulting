@@ -159,6 +159,65 @@
         .fade-in.visible { opacity: 1; transform: translateY(0); }
 
         /* RESPONSIVE */
+        /* HERO LAYOUT WITH PHOTO */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding-top: 40px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 24px;
+    border: 2px solid var(--color-border);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+    }
+    
+    .hero-tags {
+        justify-content: center;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+    }
         @media (max-width: 768px) {
             .nav { display: none; }
             .burger { display: flex; }
@@ -208,29 +267,31 @@
 
     <!-- HERO -->
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-name">Алексей Жуков</h1>
-                <p class="hero-title">Консалтинг в логистике</p>
-                <p class="hero-description">Помогаю производственным компаниям, ритейлу и дистрибьюторам</p>
-                <div class="hero-tags">
-                    <span class="hero-tag">Снижаю издержки</span>
-                    <span class="hero-tag">Запускаю склады</span>
-                    <span class="hero-tag">Внедряю WMS</span>
-                    <span class="hero-tag">Аналитика Power BI</span>
-                </div>
-                <div class="hero-buttons">
-                    <a href="https://t.me/zhukov_logistics" class="btn btn-primary" target="_blank" rel="noopener">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2L15 22L11 13L2 9L22 2Z"/></svg>
-                        Написать в Telegram
-                    </a>
-                    <a href="#services" class="btn btn-outline">
-                        Бесплатная 30-минутная диагностика
-                    </a>
-                </div>
+    <div class="container hero-container">
+        <div class="hero-content">
+            <h1 class="hero-name">Алексей Жуков</h1>
+            <p class="hero-title">Консалтинг в логистике</p>
+            <p class="hero-description">Помогаю производственным компаниям, ритейлу и дистрибьюторам</p>
+            <div class="hero-tags">
+                <span class="hero-tag">Снижаю издержки</span>
+                <span class="hero-tag">Запускаю склады</span>
+                <span class="hero-tag">Внедряю WMS</span>
+                <span class="hero-tag">Аналитика Power BI</span>
+            </div>
+            <div class="hero-buttons">
+                <a href="https://t.me/zhukov_logistics" class="btn btn-primary" target="_blank" rel="noopener">
+                    Написать в Telegram
+                </a>
+                <a href="#services" class="btn btn-outline">
+                    Бесплатная 30-минутная диагностика
+                </a>
             </div>
         </div>
-    </section>
+        <div class="hero-image">
+            <img src="photo.jpg" alt="Алексей Жуков, эксперт в логистике">
+        </div>
+    </div>
+</section>
 
     <!-- EXPERTISE -->
     <section class="section" id="expertise">
