@@ -1,39 +1,24 @@
 <!DOCTYPE html>
-<html язык="ру">
-<голова>
-    <мета набор символов="УТФ-8">
-    <мета имя="область просмотра" содержание="ширина=ширина устройства, начальный масштаб=1.0">
-    <заголовок>Алексей Жуков — Консалтинг в логистике</заголовок>
-    <мета имя="описание" содержание="Помогаю производственным компаниям, ритейлу и дистрибьюторам. Снижаю издѵЀжки, запускаю склады, внеѴряю WMS, стррю анаỸтиу в Power BI.">
-    <связь отн="предварительное подключение" href="https://fonts.googleapis.com">
-    <связь отн="предварительное подключение" href="https://fonts.gstatic.com" кросс-происхождение>
-    <связь href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&дисплей=обмен" отн="таблица стилей">
-    <стиль>
- *, *::до, *::после { маржа: 0; прокладка: 0; размер коробки: пограничная коробка; }
-        :корень {
-            --цвет-темный: #1a1a2e;
-            --цвет-темный-2: #16213e;
-            --цветовой акцент: #0f3460;
-            --цвет-подсветка: #e94560;
-            --цвет-текст: #f5f5f5;
-            --цвет-текст-приглушен: #a0a0b0;
-            --цвет-бг: #0f0f1a;
-            --цветная карта: #1e1e30;
-            --цветная-карточка-наведение: #2а2а40;
-            --цветная граница: #2d2d44;
-            --макс-ширина: 1200пх;
-            --радиус:   16пх;
-            --тень: 0 8пх   32пх ргба(0, 0, 0, 0,3);
-            --переход: 0,3s кубический безье(0,4, 0, 0,2, 1);
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Алексей Жуков — Консалтинг в логистике</title>
+    <meta name="description" content="Помогаю производственным компаниям, ритейлу и дистрибьюторам. Снижаю издержки, запускаю склады, внедряю WMS, строю аналитику в Power BI.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --color-dark: #1a1a2e; --color-dark-2: #16213e; --color-accent: #0f3460;
+            --color-highlight: #e94560; --color-text: #f5f5f5; --color-text-muted: #a0a0b0;
+            --color-bg: #0f0f1a; --color-card: #1e1e30; --color-card-hover: #2a2a40;
+            --color-border: #2d2d44; --max-width: 1200px; --radius: 16px;
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.3); --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        html { поведение прокрутки: гладкий; }
-        тело {
-            семейство шрифтов: «Интер», -apple-система, BlinkMacSystemFont, без засечек;
-            фон: вар(--цвет-бг);
-            цвет: вар(--цвет-текст);
-            высота линии: 1.6;
-            переполнение-x: скрытый;
-        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--color-bg); color: var(--color-text); line-height: 1.6; overflow-x: hidden; }
         a { color: inherit; text-decoration: none; transition: var(--transition); }
         ul { list-style: none; }
         img { max-width: 100%; display: block; }
@@ -42,14 +27,11 @@
         .section-title { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 16px; letter-spacing: -0.02em; }
         .section-subtitle { font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 60px; max-width: 700px; }
         .section-label { display: inline-block; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-highlight); margin-bottom: 12px; }
-
         .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 32px; border-radius: 50px; font-size: 0.95rem; font-weight: 600; cursor: pointer; border: none; transition: var(--transition); text-decoration: none; }
         .btn-primary { background: var(--color-highlight); color: #fff; }
         .btn-primary:hover { background: #d63050; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(233, 69, 96, 0.3); }
         .btn-outline { background: transparent; color: var(--color-text); border: 2px solid var(--color-border); }
         .btn-outline:hover { border-color: var(--color-highlight); color: var(--color-highlight); transform: translateY(-2px); }
-
-        /* HEADER */
         .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 16px 0; transition: var(--transition); }
         .header.scrolled { background: rgba(15, 15, 26, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--color-border); }
         .header .container { display: flex; align-items: center; justify-content: space-between; }
@@ -65,19 +47,18 @@
         .mobile-nav.active { opacity: 1; pointer-events: all; }
         .mobile-nav a { font-size: 1.4rem; font-weight: 600; }
         .mobile-nav-close { position: absolute; top: 24px; right: 24px; font-size: 2rem; cursor: pointer; color: var(--color-text); }
-
-        /* HERO */
         .hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; }
         .hero::before { content: ''; position: absolute; top: -50%; right: -30%; width: 80%; height: 150%; background: radial-gradient(ellipse, rgba(233, 69, 96, 0.08) 0%, transparent 60%); pointer-events: none; }
-        .hero-content { position: relative; z-index: 2; max-width: 800px; }
+        .hero-container { display: flex; align-items: center; justify-content: space-between; gap: 60px; padding-top: 40px; }
+        .hero-content { flex: 1; max-width: 600px; }
+        .hero-image { flex: 1; display: flex; justify-content: center; align-items: center; }
+        .hero-image img { width: 100%; max-width: 420px; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 24px; border: 2px solid var(--color-border); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); }
         .hero-name { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 16px; }
         .hero-title { font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 600; color: var(--color-highlight); margin-bottom: 24px; }
         .hero-description { font-size: 1.15rem; color: var(--color-text-muted); margin-bottom: 16px; max-width: 600px; }
         .hero-tags { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px; }
         .hero-tag { padding: 8px 18px; background: var(--color-card); border: 1px solid var(--color-border); border-radius: 50px; font-size: 0.85rem; font-weight: 500; color: var(--color-text-muted); }
         .hero-buttons { display: flex; flex-wrap: wrap; gap: 16px; }
-
-        /* EXPERTISE */
         .expertise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
         .expertise-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 36px 28px; transition: var(--transition); }
         .expertise-card:hover { background: var(--color-card-hover); transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--color-highlight); }
@@ -89,8 +70,6 @@
         .expertise-intro { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 40px; margin-bottom: 40px; position: relative; overflow: hidden; }
         .expertise-intro::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--color-highlight); }
         .expertise-intro p { font-size: 1.05rem; color: var(--color-text-muted); line-height: 1.8; }
-
-        /* STATS */
         .stats { background: var(--color-dark); }
         .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 60px; }
         .stat-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 36px 28px; text-align: center; transition: var(--transition); }
@@ -101,8 +80,6 @@
         .stats-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: center; padding: 48px 0; border-top: 1px solid var(--color-border); }
         .stats-summary-item .number { font-size: 2.4rem; font-weight: 900; color: var(--color-highlight); margin-bottom: 8px; }
         .stats-summary-item .text { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; }
-
-        /* SERVICES */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 28px; }
         .service-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 40px 32px; display: flex; flex-direction: column; transition: var(--transition); position: relative; overflow: hidden; }
         .service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--color-highlight); }
@@ -118,43 +95,26 @@
         .service-card .service-price { font-size: 1.2rem; font-weight: 800; color: var(--color-text); }
         .service-card .service-duration { font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px; }
         .service-note { font-size: 0.8rem; color: var(--color-text-muted); font-style: italic; margin-top: 8px; }
-
-        /* VALUE */
         .value-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
         .value-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 32px 28px; transition: var(--transition); }
         .value-card:hover { background: var(--color-card-hover); transform: translateY(-2px); }
         .value-card-icon { font-size: 2rem; margin-bottom: 16px; }
         .value-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
         .value-card p { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6; }
-
-        /* EVENTS */
         .events-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
-        .event-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 28px; transition: var(--transition); display: flex; flex-direction: column; }
+        a.event-card { text-decoration: none; color: inherit; cursor: pointer; display: flex; flex-direction: column; }
+        .event-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 28px; transition: var(--transition); }
         .event-card:hover { background: var(--color-card-hover); transform: translateY(-2px); }
+        a.event-card:hover h3 { color: var(--color-highlight); }
         .event-card-play { width: 48px; height: 48px; background: rgba(233, 69, 96, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 1.2rem; color: var(--color-highlight); transition: var(--transition); }
         .event-card:hover .event-card-play { background: var(--color-highlight); color: #fff; }
         .event-card h3 { font-size: 1rem; font-weight: 600; line-height: 1.5; }
-a.event-card {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-}
-
-a.event-card:hover h3 {
-    color: var(--color-highlight);
-}
-        
-        /* AUTHOR */
         .author-section { background: var(--color-dark); }
         .author-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 60px 48px; text-align: center; max-width: 700px; margin: 0 auto; }
         .author-avatar { width: 100px; height: 100px; background: linear-gradient(135deg, var(--color-accent), var(--color-highlight)); border-radius: 50%; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; font-size: 2.4rem; font-weight: 800; color: #fff; }
         .author-name { font-size: 1.8rem; font-weight: 800; margin-bottom: 8px; }
         .author-role { font-size: 1rem; color: var(--color-text-muted); margin-bottom: 20px; }
         .author-text { font-size: 1rem; color: var(--color-text-muted); line-height: 1.7; max-width: 500px; margin: 0 auto; }
-
-        /* FOOTER */
         .footer { background: var(--color-dark-2); border-top: 1px solid var(--color-border); padding: 60px 0 30px; }
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 48px; }
         .footer-col h4 { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-muted); margin-bottom: 16px; }
@@ -164,91 +124,24 @@ a.event-card:hover h3 {
         .footer-socials { display: flex; gap: 12px; margin-top: 12px; }
         .footer-social { width: 40px; height: 40px; background: var(--color-card); border: 1px solid var(--color-border); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: var(--transition); }
         .footer-social:hover { background: var(--color-highlight); border-color: var(--color-highlight); }
-
-        /* ANIMATIONS */
         .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-        /* RESPONSIVE */
-        /* HERO LAYOUT WITH PHOTO */
-.hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-    padding-top: 40px;
-}
-
-.hero-content {
-    flex: 1;
-    max-width: 600px;
-}
-
-.hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-image img {
-    width: 100%;
-    max-width: 420px;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 24px;
-    border: 2px solid var(--color-border);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-}
-
-/* Адаптация для мобильных устройств */
-@media (max-width: 900px) {
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
-    }
-    
-    .hero-content {
-        max-width: 100%;
-    }
-    
-    .hero-tags {
-        justify-content: center;
-    }
-    
-    .hero-buttons {
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .hero-buttons .btn {
-        width: 100%;
-        max-width: 320px;
-        justify-content: center;
-    }
-        @media (max-width: 768px) {
-            .nav { display: none; }
-            .burger { display: flex; }
-            .mobile-nav { display: flex; }
-            .section { padding: 60px 0; }
+        @media (max-width: 900px) {
+            .nav { display: none; } .burger { display: flex; } .mobile-nav { display: flex; } .section { padding: 60px 0; }
             .hero { min-height: auto; padding-top: 120px; padding-bottom: 60px; }
-            .hero-buttons { flex-direction: column; }
-            .hero-buttons .btn { text-align: center; justify-content: center; }
-            .services-grid { grid-template-columns: 1fr; }
-            .author-card { padding: 40px 24px; }
-            .expertise-intro { padding: 28px 24px; }
+            .hero-container { flex-direction: column; text-align: center; gap: 40px; }
+            .hero-content { max-width: 100%; } .hero-tags { justify-content: center; }
+            .hero-buttons { justify-content: center; flex-direction: column; align-items: center; }
+            .hero-buttons .btn { width: 100%; max-width: 320px; justify-content: center; }
+            .hero-image img { max-width: 280px; } .services-grid { grid-template-columns: 1fr; }
+            .author-card { padding: 40px 24px; } .expertise-intro { padding: 28px 24px; }
         }
     </style>
 </head>
 <body>
-
-    <!-- HEADER -->
     <header class="header" id="header">
         <div class="container">
-            <a href="#" class="logo">zhukov-consulting<span></span></a>
+            <a href="#" class="logo">zhukov-logistics.ru<span>.</span></a>
             <nav class="nav">
                 <a href="#expertise">Экспертиза</a>
                 <a href="#stats">Результаты</a>
@@ -257,15 +150,10 @@ a.event-card:hover h3 {
                 <a href="#events">Выступления</a>
                 <a href="https://t.me/zhukov_logistics" class="btn btn-primary" target="_blank" rel="noopener">Написать</a>
             </nav>
-            <div class="burger" id="burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <div class="burger" id="burger"><span></span><span></span><span></span></div>
         </div>
     </header>
 
-    <!-- MOBILE NAV -->
     <div class="mobile-nav" id="mobileNav">
         <div class="mobile-nav-close" id="mobileNavClose">&times;</div>
         <a href="#expertise" class="mobile-nav-link">Экспертиза</a>
@@ -276,35 +164,29 @@ a.event-card:hover h3 {
         <a href="https://t.me/zhukov_logistics" class="btn btn-primary" target="_blank" rel="noopener">Написать в Telegram</a>
     </div>
 
-    <!-- HERO -->
     <section class="hero">
-    <div class="container hero-container">
-        <div class="hero-content">
-            <h1 class="hero-name">Алексей Жуков</h1>
-            <p class="hero-title">Консалтинг в логистике</p>
-            <p class="hero-description">Помогаю производственным компаниям, ритейлу и дистрибьюторам</p>
-            <div class="hero-tags">
-                <span class="hero-tag">Снижаю издержки</span>
-                <span class="hero-tag">Запускаю склады</span>
-                <span class="hero-tag">Внедряю WMS</span>
-                <span class="hero-tag">Аналитика Power BI</span>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-name">Алексей Жуков</h1>
+                <p class="hero-title">Консалтинг в логистике</p>
+                <p class="hero-description">Помогаю производственным компаниям, ритейлу и дистрибьюторам</p>
+                <div class="hero-tags">
+                    <span class="hero-tag">Снижаю издержки</span>
+                    <span class="hero-tag">Запускаю склады</span>
+                    <span class="hero-tag">Внедряю WMS</span>
+                    <span class="hero-tag">Аналитика Power BI</span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="https://t.me/zhukov_logistics" class="btn btn-primary" target="_blank" rel="noopener">Написать в Telegram</a>
+                    <a href="#services" class="btn btn-outline">Бесплатная 30-минутная диагностика</a>
+                </div>
             </div>
-            <div class="hero-buttons">
-                <a href="https://t.me/zhukov_logistics" class="btn btn-primary" target="_blank" rel="noopener">
-                    Написать в Telegram
-                </a>
-                <a href="#services" class="btn btn-outline">
-                    Бесплатная 30-минутная диагностика
-                </a>
+            <div class="hero-image">
+                <img src="photo.jpg" alt="Алексей Жуков, эксперт в логистике">
             </div>
         </div>
-        <div class="hero-image">
-            <img src="photo.jpg" alt="Алексей Жуков, эксперт в логистике">
-        </div>
-    </div>
-</section>
+    </section>
 
-    <!-- EXPERTISE -->
     <section class="section" id="expertise">
         <div class="container">
             <span class="section-label fade-in">Область экспертизы</span>
@@ -317,12 +199,8 @@ a.event-card:hover h3 {
                     <div class="expertise-card-icon">🏭</div>
                     <h3>Складское хозяйство</h3>
                     <ul>
-                        <li>Аудит эффективности складов</li>
-                        <li>Аудит безопасности складов</li>
-                        <li>Взаимодействие с 3PL</li>
-                        <li>KPI складского хозяйства</li>
-                        <li>WMS/YMS</li>
-                        <li>Реинжиниринг бизнес-процессов логистики</li>
+                        <li>Аудит эффективности складов</li><li>Аудит безопасности складов</li><li>Взаимодействие с 3PL</li>
+                        <li>KPI складского хозяйства</li><li>WMS/YMS</li><li>Реинжиниринг бизнес-процессов логистики</li>
                         <li>Покупка/строительство/запуск складов</li>
                     </ul>
                 </div>
@@ -339,11 +217,8 @@ a.event-card:hover h3 {
                     <div class="expertise-card-icon">🚛</div>
                     <h3>Транспорт</h3>
                     <ul>
-                        <li>TMS</li>
-                        <li>Системы маршрутизации</li>
-                        <li>Диспетчеризация</li>
-                        <li>Доставки, поставки, последняя миля</li>
-                        <li>KPI транспортной логистики</li>
+                        <li>TMS</li><li>Системы маршрутизации</li><li>Диспетчеризация</li>
+                        <li>Доставки, поставки, последняя миля</li><li>KPI транспортной логистики</li>
                     </ul>
                 </div>
                 <div class="expertise-card fade-in">
@@ -359,62 +234,27 @@ a.event-card:hover h3 {
         </div>
     </section>
 
-    <!-- STATS -->
     <section class="section stats" id="stats">
         <div class="container">
             <span class="section-label fade-in">Ключевые цифры</span>
             <h2 class="section-title fade-in">Результаты из моей практики</h2>
             <p class="section-subtitle fade-in">Цифры, а не обещания</p>
             <div class="stats-grid">
-                <div class="stat-card fade-in">
-                    <div class="stat-number">-40%</div>
-                    <div class="stat-label">транспортных издержек</div>
-                    <div class="stat-desc">50 млн ₽ экономии за 2 года</div>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">-17%</div>
-                    <div class="stat-label">складских затрат завода</div>
-                    <div class="stat-desc">9 млн ₽ экономии в год</div>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">17 000</div>
-                    <div class="stat-label">паллетомест</div>
-                    <div class="stat-desc">запустил склад класса «А» с нуля</div>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">7 000 м²</div>
-                    <div class="stat-label">склад в Москве</div>
-                    <div class="stat-desc">полный цикл: поиск, аудит, покупка</div>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">2 РЦ</div>
-                    <div class="stat-label">внедрение WMS</div>
-                    <div class="stat-desc">Москва и Санкт-Петербург</div>
-                </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">Power BI</div>
-                    <div class="stat-label">система дашбордов</div>
-                    <div class="stat-desc">KPI в реальном времени</div>
-                </div>
+                <div class="stat-card fade-in"><div class="stat-number">-40%</div><div class="stat-label">транспортных издержек</div><div class="stat-desc">50 млн ₽ экономии за 2 года</div></div>
+                <div class="stat-card fade-in"><div class="stat-number">-17%</div><div class="stat-label">складских затрат завода</div><div class="stat-desc">9 млн ₽ экономии в год</div></div>
+                <div class="stat-card fade-in"><div class="stat-number">17 000</div><div class="stat-label">паллетомест</div><div class="stat-desc">запустил склад класса «А» с нуля</div></div>
+                <div class="stat-card fade-in"><div class="stat-number">7 000 м²</div><div class="stat-label">склад в Москве</div><div class="stat-desc">полный цикл: поиск, аудит, покупка</div></div>
+                <div class="stat-card fade-in"><div class="stat-number">2 РЦ</div><div class="stat-label">внедрение WMS</div><div class="stat-desc">Москва и Санкт-Петербург</div></div>
+                <div class="stat-card fade-in"><div class="stat-number">Power BI</div><div class="stat-label">система дашбордов</div><div class="stat-desc">KPI в реальном времени</div></div>
             </div>
             <div class="stats-summary fade-in">
-                <div class="stats-summary-item">
-                    <div class="number">22+</div>
-                    <div class="text">лет успешной практики в логистике</div>
-                </div>
-                <div class="stats-summary-item">
-                    <div class="number">2</div>
-                    <div class="text">спроектированных и построенных РЦ класса «А»</div>
-                </div>
-                <div class="stats-summary-item">
-                    <div class="number">&gt;500 млн ₽</div>
-                    <div class="text">экономия после внедрения проектов оптимизации</div>
-                </div>
+                <div class="stats-summary-item"><div class="number">22+</div><div class="text">лет успешной практики в логистике</div></div>
+                <div class="stats-summary-item"><div class="number">2</div><div class="text">спроектированных и построенных РЦ класса «А»</div></div>
+                <div class="stats-summary-item"><div class="number">&gt;500 млн ₽</div><div class="text">экономия после внедрения проектов оптимизации</div></div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES -->
     <section class="section" id="services">
         <div class="container">
             <span class="section-label fade-in">Услуги</span>
@@ -427,16 +267,8 @@ a.event-card:hover h3 {
                     <h4>Что вы получите</h4>
                     <p>За 3-5 дней я выявляю ключевые точки потерь на вашем складе или транспорте, оцениваю потенциальную экономию в рублях, даю дорожную карту первых изменений.</p>
                     <h4>Когда заказывают</h4>
-                    <ul>
-                        <li>«Чувствуют, что логистика дорогая, но не знают, где теряются деньги»</li>
-                        <li>«Нет времени и внутренних экспертов на полный аудит»</li>
-                        <li>«Хочу проверить гипотезу, что можно сэкономить 10-20%»</li>
-                    </ul>
-                    <div class="service-meta">
-                        <div class="service-price">150 000 — 250 000 ₽</div>
-                        <div class="service-duration">Срок: 3-5 дней</div>
-                        <p class="service-note">* сроки могут сдвигаться в случае задержек в предоставлении информации</p>
-                    </div>
+                    <ul><li>«Чувствуют, что логистика дорогая, но не знают, где теряются деньги»</li><li>«Нет времени и внутренних экспертов на полный аудит»</li><li>«Хочу проверить гипотезу, что можно сэкономить 10-20%»</li></ul>
+                    <div class="service-meta"><div class="service-price">150 000 — 250 000 ₽</div><div class="service-duration">Срок: 3-5 дней</div><p class="service-note">* сроки могут сдвигаться в случае задержек в предоставлении информации</p></div>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-card-badge">Популярное</div>
@@ -445,16 +277,8 @@ a.event-card:hover h3 {
                     <h4>Что вы получите</h4>
                     <p>Я выявляю все скрытые и явные потери, строю полный P&L логистики, рассчитываю потенциал снижения издержек, даю детальный план на 12 месяцев.</p>
                     <h4>Когда заказывают</h4>
-                    <ul>
-                        <li>«Логистика съедает более 7-10% выручки, а должно быть 4-5%»</li>
-                        <li>«Пробовали оптимизировать сами, но эффект разовый»</li>
-                        <li>«Нужны цифры для инвестора/совета директоров»</li>
-                        <li>«Хотим перейти к оплате от результата»</li>
-                    </ul>
-                    <div class="service-meta">
-                        <div class="service-price">450 000 ₽</div>
-                        <div class="service-duration">Срок: 14-20 рабочих дней</div>
-                    </div>
+                    <ul><li>«Логистика съедает более 7-10% выручки, а должно быть 4-5%»</li><li>«Пробовали оптимизировать сами, но эффект разовый»</li><li>«Нужны цифры для инвестора/совета директоров»</li><li>«Хотим перейти к оплате от результата»</li></ul>
+                    <div class="service-meta"><div class="service-price">450 000 ₽</div><div class="service-duration">Срок: 14-20 рабочих дней</div></div>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-card-badge">Оплата от результата</div>
@@ -463,98 +287,58 @@ a.event-card:hover h3 {
                     <h4>Что вы получите</h4>
                     <p>Я беру на себя ответственность за снижение ваших логистических издержек. Вы платите только 30% от чистой годовой экономии, подтверждённой вашей бухгалтерией.</p>
                     <h4>Когда заказывают</h4>
-                    <ul>
-                        <li>«Устали от консультантов, которые пишут отчёты без результата»</li>
-                        <li>«Хотим платить за конкретные сэкономленные деньги»</li>
-                        <li>«Сложная внутренняя кухня, нужен сильный внедренец»</li>
-                    </ul>
-                    <div class="service-meta">
-                        <div class="service-price">30% от годовой экономии</div>
-                        <div class="service-duration">Срок: 3-6 месяцев (минимальный чек 1,5 млн ₽)</div>
-                        <p class="service-note">* сроки могут сдвигаться в случае задержек в предоставлении информации</p>
-                    </div>
+                    <ul><li>«Устали от консультантов, которые пишут отчёты без результата»</li><li>«Хотим платить за конкретные сэкономленные деньги»</li><li>«Сложная внутренняя кухня, нужен сильный внедренец»</li></ul>
+                    <div class="service-meta"><div class="service-price">30% от годовой экономии</div><div class="service-duration">Срок: 3-6 месяцев (минимальный чек 1,5 млн ₽)</div><p class="service-note">* сроки могут сдвигаться в случае задержек в предоставлении информации</p></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- VALUE -->
     <section class="section author-section" id="value">
         <div class="container">
             <span class="section-label fade-in">Ценность для вас</span>
             <h2 class="section-title fade-in">Почему работают со мной</h2>
             <p class="section-subtitle fade-in">Откликаюсь только на задачи, где могу реально помочь. Если не подхожу — скажу честно.</p>
             <div class="value-grid">
-                <div class="value-card fade-in">
-                    <div class="value-card-icon">🎯</div>
-                    <h3>Годы опыта и практики</h3>
-                    <p>Более 22 лет опыта в логистике.</p>
-                </div>
-                <div class="value-card fade-in">
-                    <div class="value-card-icon">🔒</div>
-                    <h3>Конфиденциальность</h3>
-                    <p>Обязательное заключение NDA. Ваша информация под защитой.</p>
-                </div>
-                <div class="value-card fade-in">
-                    <div class="value-card-icon">🤝</div>
-                    <h3>Персональный подход</h3>
-                    <p>Индивидуальная работа с каждым клиентом позволяет решать даже самые сложные проблемы.</p>
-                </div>
-                <div class="value-card fade-in">
-                    <div class="value-card-icon">⭐</div>
-                    <h3>Высокий уровень сервиса</h3>
-                    <p>Каждый клиент — отдельный проект, в который я погружаюсь максимально.</p>
-                </div>
-                <div class="value-card fade-in">
-                    <div class="value-card-icon">⚡</div>
-                    <h3>Эффективность</h3>
-                    <p>Единовременно работаю только с вашей компанией.</p>
-                </div>
-                <div class="value-card fade-in">
-                    <div class="value-card-icon">💰</div>
-                    <h3>Выгода</h3>
-                    <p>Оплата за результат, подтвержденный цифрами.</p>
-                </div>
+                <div class="value-card fade-in"><div class="value-card-icon">🎯</div><h3>Годы опыта и практики</h3><p>Более 22 лет опыта в логистике.</p></div>
+                <div class="value-card fade-in"><div class="value-card-icon">🔒</div><h3>Конфиденциальность</h3><p>Обязательное заключение NDA. Ваша информация под защитой.</p></div>
+                <div class="value-card fade-in"><div class="value-card-icon">🤝</div><h3>Персональный подход</h3><p>Индивидуальная работа с каждым клиентом позволяет решать даже самые сложные проблемы.</p></div>
+                <div class="value-card fade-in"><div class="value-card-icon">⭐</div><h3>Высокий уровень сервиса</h3><p>Каждый клиент — отдельный проект, в который я погружаюсь максимально.</p></div>
+                <div class="value-card fade-in"><div class="value-card-icon">⚡</div><h3>Эффективность</h3><p>Единовременно работаю только с вашей компанией.</p></div>
+                <div class="value-card fade-in"><div class="value-card-icon">💰</div><h3>Выгода</h3><p>Оплата за результат, подтвержденный цифрами.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- EVENTS -->
     <section class="section" id="events">
         <div class="container">
             <span class="section-label fade-in">Профессиональная среда</span>
             <h2 class="section-title fade-in">Выступления и интервью</h2>
             <div class="events-grid">
-    <a href="https://scmpro.ru/novostdetalno_4_138/?ysclid=mpfa1gyk8x452173139" class="event-card fade-in" target="_blank" rel="noopener">
-        <div class="event-card-play">▶</div>
-        <h3>XI SCM Конгресс руководителей цепей поставок</h3>
-    </a>
-    
-    <a href="https://conf.oborot.ru/archive/2023/award.html?ysclid=mpfa2s102m429876615" class="event-card fade-in" target="_blank" rel="noopener">
-        <div class="event-card-play">▶</div>
-        <h3>Член большого совета Премии «Большой Оборот 2023»</h3>
-    </a>
-    
-    <a href="https://www.cemat-russia.ru/" class="event-card fade-in" target="_blank" rel="noopener">
-        <div class="event-card-play">▶</div>
-        <h3>CeMAT Russia — международная выставка складской техники</h3>
-    </a>
-    
-    <a href="https://scmpro.ru/12_scm_congress/" class="event-card fade-in" target="_blank" rel="noopener">
-        <div class="event-card-play">▶</div>
-        <h3>XII SCM Конгресс руководителей цепей поставок</h3>
-    </a>
-    
-    <a href="https://sim.oborot.ru/archive/2025/?oid=408293&cid=223494&sid=1647" class="event-card fade-in" target="_blank" rel="noopener">
-        <div class="event-card-play">▶</div>
-        <h3>Работа склада селлера с маркетплейсами: точки роста и подводные камни</h3>
-    </a>
-</div>    </div>
+                <a href="https://scmpro.ru/novostdetalno_4_138/?ysclid=mpfa1gyk8x452173139" class="event-card fade-in" target="_blank" rel="noopener">
+                    <div class="event-card-play">▶</div>
+                    <h3>XI SCM Конгресс руководителей цепей поставок</h3>
+                </a>
+                <a href="https://conf.oborot.ru/archive/2023/award.html?ysclid=mpfa2s102m429876615" class="event-card fade-in" target="_blank" rel="noopener">
+                    <div class="event-card-play">▶</div>
+                    <h3>Член большого совета Премии «Большой Оборот 2023»</h3>
+                </a>
+                <a href="https://www.cemat-russia.ru/" class="event-card fade-in" target="_blank" rel="noopener">
+                    <div class="event-card-play">▶</div>
+                    <h3>CeMAT Russia — международная выставка складской техники</h3>
+                </a>
+                <a href="https://scmpro.ru/12_scm_congress/" class="event-card fade-in" target="_blank" rel="noopener">
+                    <div class="event-card-play">▶</div>
+                    <h3>XII SCM Конгресс руководителей цепей поставок</h3>
+                </a>
+                <a href="https://sim.oborot.ru/archive/2025/?oid=408293&cid=223494&sid=1647" class="event-card fade-in" target="_blank" rel="noopener">
+                    <div class="event-card-play">▶</div>
+                    <h3>Работа склада селлера с маркетплейсами: точки роста и подводные камни</h3>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- AUTHOR -->
     <section class="section author-section">
         <div class="container">
             <div class="author-card fade-in">
@@ -569,7 +353,6 @@ a.event-card:hover h3 {
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -600,70 +383,23 @@ a.event-card:hover h3 {
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                &copy; 2024 Алексей Жуков. Консалтинг в логистике. Все права защищены.
-            </div>
+            <div class="footer-bottom">&copy; 2024 Алексей Жуков. Консалтинг в логистике. Все права защищены.</div>
         </div>
     </footer>
 
     <script>
-        // Header scroll
         const header = document.getElementById('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Mobile nav
+        window.addEventListener('scroll', () => { if (window.scrollY > 50) header.classList.add('scrolled'); else header.classList.remove('scrolled'); });
         const burger = document.getElementById('burger');
         const mobileNav = document.getElementById('mobileNav');
         const mobileNavClose = document.getElementById('mobileNavClose');
         const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-
-        burger.addEventListener('click', () => {
-            mobileNav.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-
-        mobileNavClose.addEventListener('click', () => {
-            mobileNav.classList.remove('active');
-            document.body.style.overflow = '';
-        });
-
-        mobileNavLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileNav.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        });
-
-        // Fade in animation
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
+        burger.addEventListener('click', () => { mobileNav.classList.add('active'); document.body.style.overflow = 'hidden'; });
+        mobileNavClose.addEventListener('click', () => { mobileNav.classList.remove('active'); document.body.style.overflow = ''; });
+        mobileNavLinks.forEach(link => { link.addEventListener('click', () => { mobileNav.classList.remove('active'); document.body.style.overflow = ''; }); });
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { e.preventDefault(); const target = document.querySelector(this.getAttribute('href')); if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }); });
     </script>
 </body>
 </html>
