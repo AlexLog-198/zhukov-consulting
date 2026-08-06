@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://zhukov-logistics.ru/sitemap.xml
+
+User-agent: Yandex
+Allow: /
+Clean-param: ysclid&utm_source&utm_medium&utm_campaign
