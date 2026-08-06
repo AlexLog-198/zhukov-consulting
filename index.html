@@ -13,7 +13,7 @@
     <meta name="geo.region" content="RU-SPE">
     <meta name="geo.placename" content="Санкт-Петербург">
 
-    <!-- Open Graph для красивых ссылок в соцсетях и мессенджерах -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Алексей Жуков — Консультант по логистике, аудит склада, внедрение WMS">
     <meta property="og:description" content="22+ года в логистике. Снижаю издержки на 17-40%, запускаю склады, внедряю WMS. Оплата от результата.">
@@ -28,14 +28,12 @@
     <meta name="twitter:description" content="22+ года в логистике. Снижаю издержки, внедряю WMS. Оплата от результата.">
     <meta name="twitter:image" content="https://zhukov-logistics.ru/photo.jpg">
 
-    <!-- Канонический URL -->
     <link rel="canonical" href="https://zhukov-logistics.ru/">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- Schema.org — структурированные данные для поисковиков -->
+    <!-- Schema.org -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -46,59 +44,24 @@
       "telephone": "+79614845592",
       "email": "alexlogistic.optimize@gmail.com",
       "priceRange": "₽₽",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Санкт-Петербург",
-        "addressCountry": "RU"
-      },
+      "address": { "@type": "PostalAddress", "addressLocality": "Санкт-Петербург", "addressCountry": "RU" },
       "description": "Независимый эксперт по логистике с опытом 22+ года. Аудит складов, внедрение WMS/TMS, снижение издержек, аналитика Power BI.",
       "founder": {
-        "@type": "Person",
-        "name": "Алексей Жуков",
-        "jobTitle": "Независимый эксперт по логистике и цепям поставок",
+        "@type": "Person", "name": "Алексей Жуков", "jobTitle": "Независимый эксперт по логистике и цепям поставок",
         "knowsAbout": ["Логистика", "Складская логистика", "WMS", "TMS", "Supply Chain Management", "Power BI", "Аудит склада", "Маркетплейсы"]
       },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Россия"
-      },
+      "areaServed": { "@type": "Country", "name": "Россия" },
       "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Услуги",
+        "@type": "OfferCatalog", "name": "Услуги",
         "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Экспресс-диагностика логистики",
-              "description": "Выявление точек потерь за 3-5 дней"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Аудит логистических потерь",
-              "description": "Построение P&L логистики, план экономии на 12 месяцев"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Внедрение WMS/TMS",
-              "description": "Сопровождение внедрения с оплатой от результата"
-            }
-          }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Экспресс-диагностика логистики", "description": "Выявление точек потерь за 3-5 дней" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Аудит логистических потерь", "description": "Построение P&L логистики, план экономии на 12 месяцев" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Внедрение WMS/TMS", "description": "Сопровождение внедрения с оплатой от результата" } }
         ]
       }
     }
     </script>
 
-    <style>
-        /* ... весь твой CSS остается без изменений ... */
-    </style>
-</head>
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
@@ -126,9 +89,9 @@
         .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 16px 0; transition: var(--transition); }
         .header.scrolled { background: rgba(15, 15, 26, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--color-border); }
         .header .container { display: flex; align-items: center; justify-content: space-between; }
-        .logo { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.02em; }
+        .logo { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.02em; }
         .logo span { color: var(--color-highlight); }
-        .nav { display: flex; align-items: center; gap: 32px; }
+        .nav { display: flex; align-items: center; gap: 24px; }
         .nav a { font-size: 0.9rem; font-weight: 500; color: var(--color-text-muted); }
         .nav a:hover { color: var(--color-text); }
         .nav .btn { padding: 10px 24px; font-size: 0.85rem; }
@@ -186,6 +149,19 @@
         .service-card .service-price { font-size: 1.2rem; font-weight: 800; color: var(--color-text); }
         .service-card .service-duration { font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px; }
         .service-note { font-size: 0.8rem; color: var(--color-text-muted); font-style: italic; margin-top: 8px; }
+        
+        /* ARTICLES SECTION STYLES */
+        .articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; }
+        .article-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; transition: var(--transition); display: flex; flex-direction: column; }
+        .article-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--color-highlight); }
+        .article-image { width: 100%; height: 200px; overflow: hidden; }
+        .article-image img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        .article-card:hover .article-image img { transform: scale(1.05); }
+        .article-content { padding: 28px; display: flex; flex-direction: column; flex: 1; }
+        .article-content h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; line-height: 1.4; }
+        .article-content p { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 24px; flex: 1; }
+        .article-btn { width: 100%; justify-content: center; }
+
         .value-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
         .value-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 32px 28px; transition: var(--transition); }
         .value-card:hover { background: var(--color-card-hover); transform: translateY(-2px); }
@@ -224,7 +200,7 @@
             .hero-content { max-width: 100%; } .hero-tags { justify-content: center; }
             .hero-buttons { justify-content: center; flex-direction: column; align-items: center; }
             .hero-buttons .btn { width: 100%; max-width: 320px; justify-content: center; }
-            .hero-image img { max-width: 280px; } .services-grid { grid-template-columns: 1fr; }
+            .hero-image img { max-width: 280px; } .services-grid, .articles-grid { grid-template-columns: 1fr; }
             .author-card { padding: 40px 24px; } .expertise-intro { padding: 28px 24px; }
         }
     </style>
@@ -232,14 +208,14 @@
 <body>
     <header class="header" id="header">
         <div class="container">
-            <a href="#" class="logo">ZH<span>.</span></a>
+            <a href="#" class="logo">ZH<span></span></a>
             <nav class="nav">
                 <a href="#expertise">Экспертиза</a>
                 <a href="#stats">Результаты</a>
                 <a href="#services">Услуги</a>
-                <a href="#value">Ценность</a>
+                <a href="#articles">Публикации</a>
                 <a href="#events">Выступления</a>
-                <a href="https://t.me/zhukov_logistics" class="btn btn-primary" target="_blank" rel="noopener">Написать</a>
+                <a href="https://t.me/trickylogistics" class="btn btn-primary" target="_blank" rel="noopener">Написать</a>
             </nav>
             <div class="burger" id="burger"><span></span><span></span><span></span></div>
         </div>
@@ -250,9 +226,9 @@
         <a href="#expertise" class="mobile-nav-link">Экспертиза</a>
         <a href="#stats" class="mobile-nav-link">Результаты</a>
         <a href="#services" class="mobile-nav-link">Услуги</a>
-        <a href="#value" class="mobile-nav-link">Ценность</a>
+        <a href="#articles" class="mobile-nav-link">Публикации</a>
         <a href="#events" class="mobile-nav-link">Выступления</a>
-        <a href="https://t.me/zhukov_logistics" class="btn btn-primary" target="_blank" rel="noopener">Написать в Telegram</a>
+        <a href="https://t.me/trickylogistics" class="btn btn-primary" target="_blank" rel="noopener">Написать в Telegram</a>
     </div>
 
     <section class="hero">
@@ -268,7 +244,7 @@
                     <span class="hero-tag">Аналитика Power BI</span>
                 </div>
                 <div class="hero-buttons">
-                    <a href="https://t.me/zhukov_logistics" class="btn btn-primary" target="_blank" rel="noopener">Написать в Telegram</a>
+                    <a href="https://t.me/trickylogistics" class="btn btn-primary" target="_blank" rel="noopener">Написать в Telegram</a>
                     <a href="#services" class="btn btn-outline">Бесплатная 30-минутная диагностика</a>
                 </div>
             </div>
@@ -385,6 +361,27 @@
         </div>
     </section>
 
+    <!-- РАЗДЕЛ: ПУБЛИКАЦИИ И МАТЕРИАЛЫ -->
+    <section class="section" id="articles">
+        <div class="container">
+            <span class="section-label fade-in">Публикации и материалы</span>
+            <h2 class="section-title fade-in">Статьи и исследования</h2>
+            <p class="section-subtitle fade-in">Делюсь экспертизой: разбор кейсов, аналитика и полезные материалы</p>
+            <div class="articles-grid">
+                <div class="article-card fade-in">
+                    <div class="article-image">
+                        <img src="case-wms.jpg" alt="Внедрение WMS на двух РЦ">
+                    </div>
+                    <div class="article-content">
+                        <h3>Внедрение WMS на двух РЦ: ошибки -80%, скорость +30%</h3>
+                        <p>История двух запусков: первый — провал, второй — успех. Ключевой вывод: WMS — это не про софт, а про людей.</p>
+                        <a href="case-wms.html" class="btn btn-outline article-btn">Читать кейс</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section author-section" id="value">
         <div class="container">
             <span class="section-label fade-in">Ценность для вас</span>
@@ -438,7 +435,7 @@
                 <p class="author-role">Независимый эксперт в логистике</p>
                 <p class="author-text">Откликаюсь только на задачи, где могу реально помочь. Если не подхожу — скажу честно. Клиенты доверяют мне в самых сложных вопросах, потому что знают, что получат честный и качественный результат.</p>
                 <div style="margin-top: 32px;">
-                    <a href="https://t.me/zhukov_logistics" class="btn btn-primary" target="_blank" rel="noopener">Связаться со мной</a>
+                    <a href="https://t.me/trickylogistics" class="btn btn-primary" target="_blank" rel="noopener">Связаться со мной</a>
                 </div>
             </div>
         </div>
@@ -463,13 +460,17 @@
                     <a href="#expertise">Экспертиза</a>
                     <a href="#stats">Результаты</a>
                     <a href="#services">Услуги</a>
+                    <a href="#articles">Публикации</a>
                     <a href="#events">Выступления</a>
                 </div>
                 <div class="footer-col">
                     <h4>Социальные сети</h4>
                     <div class="footer-socials">
-                        <a href="https://t.me/zhukov_logistics" class="footer-social" target="_blank" rel="noopener" title="Telegram">
+                        <a href="https://t.me/trickylogistics" class="footer-social" target="_blank" rel="noopener" title="Telegram канал">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/alexey-z-8678847a/" class="footer-social" target="_blank" rel="noopener" title="LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                         </a>
                     </div>
                 </div>
