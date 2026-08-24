@@ -146,9 +146,9 @@
         .articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; }
         .article-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; transition: var(--transition); display: flex; flex-direction: column; }
         .article-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--color-highlight); }
-        .article-image { width: 100%; height: 200px; overflow: hidden; }
-        .article-image img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
-        .article-card:hover .article-image img { transform: scale(1.05); }
+        .article-image { width: 100%; height: 220px; overflow: hidden; background: var(--color-dark); }
+.article-image img { width: 100%; height: 100%; object-fit: contain; transition: var(--transition); }
+.article-card:hover .article-image img { transform: scale(1.03); }
         .article-content { padding: 28px; display: flex; flex-direction: column; flex: 1; }
         .article-content h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; line-height: 1.4; }
         .article-content p { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 24px; flex: 1; }
@@ -445,24 +445,26 @@
             <h2 class="section-title fade-in">Статьи и исследования</h2>
             <p class="section-subtitle fade-in">Делюсь экспертизой: разбор кейсов, аналитика и полезные материалы</p>
             <div class="articles-grid">
-                <div class="article-card fade-in">
-                    <div class="article-image">
-                        <img src="case-wms.jpg" alt="Внедрение WMS на двух РЦ">
-                    </div>
-                    <div class="article-content">
-                        <h3>Внедрение WMS на двух РЦ: ошибки -80%, скорость +30%</h3>
-                        <p>История двух запусков: первый — провал, второй — успех. Ключевой вывод: WMS — это не про софт, а про людей.</p>
-                        <a href="case-wms.html" class="btn btn-outline article-btn">Читать кейс</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 <div class="article-card fade-in">
+<div class="article-image">
+<img src="case-wms.jpg" alt="Внедрение WMS на двух РЦ">
+</div>
+<div class="article-content">
+<h3>Внедрение WMS на двух РЦ: ошибки -80%, скорость +30%</h3>
+<p>История двух запусков: первый — провал, второй — успех. Ключевой вывод: WMS — это не про софт, а про людей.</p>
+<a href="case-wms.html" class="btn btn-outline article-btn">Читать кейс</a>
+</div>
+</div>
+
+<div class="article-card fade-in">
+<div class="article-image">
+<img src="barter-presentation.jpg" alt="Бартер интересов внутри компании">
+</div>
 <div class="article-content">
 <h3>Бартер интересов внутри компании: Логистика как нервная система бизнеса</h3>
 <p>Как выстроить WIN-WIN взаимодействие между логистикой, продажами, финансами и бухгалтерией. Практическое руководство по внедрению S&OP.</p>
 <a href="barter-interesov.html" class="btn btn-outline article-btn">Читать статью</a>
+</div>
 </div>
 </div>
     
