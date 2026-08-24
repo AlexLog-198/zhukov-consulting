@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="alternate icon" href="/favicon.ico">
+    <link rel="alternate icon" href="/favicon.ico">
     <meta name="google-site-verification" content="fO6_sl32gks3uYWe4sfaYuc7zMtuCsvfWEZJOt0uT4c" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -143,16 +143,19 @@
         .service-card .service-price { font-size: 1.2rem; font-weight: 800; color: var(--color-text); }
         .service-card .service-duration { font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px; }
         .service-note { font-size: 0.8rem; color: var(--color-text-muted); font-style: italic; margin-top: 8px; }
+        
+        /* ИСПРАВЛЕННЫЕ СТИЛИ ДЛЯ КАРТОЧЕК СТАТЕЙ */
         .articles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px; }
         .article-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; transition: var(--transition); display: flex; flex-direction: column; }
         .article-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--color-highlight); }
         .article-image { width: 100%; height: 220px; overflow: hidden; background: var(--color-dark); }
-.article-image img { width: 100%; height: 100%; object-fit: contain; transition: var(--transition); }
-.article-card:hover .article-image img { transform: scale(1.03); }
+        .article-image img { width: 100%; height: 100%; object-fit: contain; transition: var(--transition); }
+        .article-card:hover .article-image img { transform: scale(1.03); }
         .article-content { padding: 28px; display: flex; flex-direction: column; flex: 1; }
         .article-content h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; line-height: 1.4; }
         .article-content p { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6; margin-bottom: 24px; flex: 1; }
         .article-btn { width: 100%; justify-content: center; }
+        
         .value-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
         .value-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 32px 28px; transition: var(--transition); }
         .value-card:hover { background: var(--color-card-hover); transform: translateY(-2px); }
@@ -245,88 +248,89 @@
         </div>
     </section>
 
-       <!-- АКЦИЯ АВГУСТА: БЕСПЛАТНАЯ ЭКСПРЕСС-ДИАГНОСТИКА ФИНАНСОВЫХ ПОТЕРЬ - АУДИТ -->
-<section class="section promo-section" style="background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-dark) 100%); padding: 80px 0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
-<div class="container">
-<!-- ВЫДЕЛЕННЫЙ БЛОК АКЦИИ -->
-<div style="background: linear-gradient(135deg, rgba(233, 69, 96, 0.1) 0%, rgba(15, 52, 96, 0.1) 100%); border: 2px solid var(--color-highlight); border-radius: var(--radius); padding: 48px 40px; margin-bottom: 60px; position: relative; overflow: hidden;">
-<!-- Декоративный элемент -->
-<div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(233, 69, 96, 0.2) 0%, transparent 70%); border-radius: 50%;"></div>
-<div style="position: absolute; bottom: -30px; left: -30px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(15, 52, 96, 0.3) 0%, transparent 70%); border-radius: 50%;"></div>
+    <!-- АКЦИЯ АВГУСТА: БЕСПЛАТНАЯ ЭКСПРЕСС-ДИАГНОСТИКА ФИНАНСОВЫХ ПОТЕРЬ - АУДИТ -->
+    <section class="section promo-section" style="background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-dark) 100%); padding: 80px 0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+        <div class="container">
+            <!-- ВЫДЕЛЕННЫЙ БЛОК АКЦИИ -->
+            <div style="background: linear-gradient(135deg, rgba(233, 69, 96, 0.1) 0%, rgba(15, 52, 96, 0.1) 100%); border: 2px solid var(--color-highlight); border-radius: var(--radius); padding: 48px 40px; margin-bottom: 60px; position: relative; overflow: hidden;">
+                <!-- Декоративный элемент -->
+                <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(233, 69, 96, 0.2) 0%, transparent 70%); border-radius: 50%;"></div>
+                <div style="position: absolute; bottom: -30px; left: -30px; width: 150px; height: 150px; background: radial-gradient(circle, rgba(15, 52, 96, 0.3) 0%, transparent 70%); border-radius: 50%;"></div>
 
-<div style="text-align: center; margin-bottom: 40px; position: relative; z-index: 1;">
-<span class="section-label" style="background: var(--color-highlight); color: #fff; padding: 10px 24px; border-radius: 50px; font-size: 0.9rem; font-weight: 700; display: inline-block; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(233, 69, 96, 0.3);">
- АКЦИЯ АВГУСТА
-</span>
-<h2 class="section-title" style="margin-top: 16px; font-size: clamp(1.8rem, 4vw, 2.4rem);">
-Бесплатный экспресс-аудит логистики
-</h2>
-<p class="section-subtitle" style="max-width: 800px; margin: 20px auto 0; font-size: 1.05rem;">
-Для производственных и торговых компаний. <br>
-<strong style="color: var(--color-text);">Санкт-Петербург и Ленинградская область:</strong> приеду лично. <br>
-<strong style="color: var(--color-text);">Другие регионы:</strong> по договоренности (оплачиваются только транспортные расходы).
-</p>
-</div>
+                <div style="text-align: center; margin-bottom: 40px; position: relative; z-index: 1;">
+                    <span class="section-label" style="background: var(--color-highlight); color: #fff; padding: 10px 24px; border-radius: 50px; font-size: 0.9rem; font-weight: 700; display: inline-block; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(233, 69, 96, 0.3);">
+                     АКЦИЯ АВГУСТА
+                    </span>
+                    <h2 class="section-title" style="margin-top: 16px; font-size: clamp(1.8rem, 4vw, 2.4rem);">
+                    Бесплатный экспресс-аудит логистики
+                    </h2>
+                    <p class="section-subtitle" style="max-width: 800px; margin: 20px auto 0; font-size: 1.05rem;">
+                    Для производственных и торговых компаний. <br>
+                    <strong style="color: var(--color-text);">Санкт-Петербург и Ленинградская область:</strong> приеду лично. <br>
+                    <strong style="color: var(--color-text);">Другие регионы:</strong> по договоренности (оплачиваются только транспортные расходы).
+                    </p>
+                </div>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; position: relative; z-index: 1;">
-<!-- Что я сделаю -->
-<div style="background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 32px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);">
-<h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; color: var(--color-highlight);">Что я сделаю:</h3>
-<ul style="list-style: none; display: flex; flex-direction: column; gap: 16px;">
-<li style="display: flex; gap: 12px; align-items: flex-start;">
-<span style="color: #00cc66; font-size: 1.3rem; flex-shrink: 0; font-weight: 700;">✓</span>
-<span style="color: var(--color-text-muted); line-height: 1.5;">Проверю ваши текущие метрики и складские процессы.</span>
-</li>
-<li style="display: flex; gap: 12px; align-items: flex-start;">
-<span style="color: #00cc66; font-size: 1.3rem; flex-shrink: 0; font-weight: 700;">✓</span>
-<span style="color: var(--color-text-muted); line-height: 1.5;">Найду узкие места в документообороте и управлении запасами.</span>
-</li>
-<li style="display: flex; gap: 12px; align-items: flex-start;">
-<span style="color: #00cc66; font-size: 1.3rem; flex-shrink: 0; font-weight: 700;">✓</span>
-<span style="color: var(--color-text-muted); line-height: 1.5;">Рассчитаю потенциал экономии в реальных рублях.</span>
-</li>
-</ul>
-</div>
-<!-- Что вы получите -->
-<div style="background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 32px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);">
-<h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; color: var(--color-highlight);">Что вы получите:</h3>
-<p style="color: var(--color-text-muted); margin-bottom: 16px; line-height: 1.6;">
-Отчет с <strong style="color: var(--color-text);">3–5 быстрыми шагами</strong>, которые дадут измеримый результат уже в первый месяц.
-</p>
-<div style="background: rgba(233, 69, 96, 0.1); border-left: 3px solid var(--color-highlight); padding: 16px; border-radius: 0 8px 8px 0;">
-<p style="color: var(--color-text); font-size: 0.95rem; margin: 0; font-style: italic; line-height: 1.5;">
-«Моя цель не продать вам часы консалтинга. Я хочу показать вам, где именно в ваших процессах теряются деньги».
-</p>
-</div>
-</div>
-</div>
-</div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; position: relative; z-index: 1;">
+                    <!-- Что я сделаю -->
+                    <div style="background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 32px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);">
+                        <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; color: var(--color-highlight);">Что я сделаю:</h3>
+                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 16px;">
+                            <li style="display: flex; gap: 12px; align-items: flex-start;">
+                                <span style="color: #00cc66; font-size: 1.3rem; flex-shrink: 0; font-weight: 700;">✓</span>
+                                <span style="color: var(--color-text-muted); line-height: 1.5;">Проверю ваши текущие метрики и складские процессы.</span>
+                            </li>
+                            <li style="display: flex; gap: 12px; align-items: flex-start;">
+                                <span style="color: #00cc66; font-size: 1.3rem; flex-shrink: 0; font-weight: 700;">✓</span>
+                                <span style="color: var(--color-text-muted); line-height: 1.5;">Найду узкие места в документообороте и управлении запасами.</span>
+                            </li>
+                            <li style="display: flex; gap: 12px; align-items: flex-start;">
+                                <span style="color: #00cc66; font-size: 1.3rem; flex-shrink: 0; font-weight: 700;">✓</span>
+                                <span style="color: var(--color-text-muted); line-height: 1.5;">Рассчитаю потенциал экономии в реальных рублях.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Что вы получите -->
+                    <div style="background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 32px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);">
+                        <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; color: var(--color-highlight);">Что вы получите:</h3>
+                        <p style="color: var(--color-text-muted); margin-bottom: 16px; line-height: 1.6;">
+                            Отчет с <strong style="color: var(--color-text);">3–5 быстрыми шагами</strong>, которые дадут измеримый результат уже в первый месяц.
+                        </p>
+                        <div style="background: rgba(233, 69, 96, 0.1); border-left: 3px solid var(--color-highlight); padding: 16px; border-radius: 0 8px 8px 0;">
+                            <p style="color: var(--color-text); font-size: 0.95rem; margin: 0; font-style: italic; line-height: 1.5;">
+                                «Моя цель не продать вам часы консалтинга. Я хочу показать вам, где именно в ваших процессах теряются деньги».
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<!-- РАЗДЕЛИТЕЛЬ -->
-<div style="height: 2px; background: linear-gradient(90deg, transparent 0%, var(--color-border) 50%, transparent 100%); margin: 60px 0;"></div>
+            <!-- РАЗДЕЛИТЕЛЬ -->
+            <div style="height: 2px; background: linear-gradient(90deg, transparent 0%, var(--color-border) 50%, transparent 100%); margin: 60px 0;"></div>
 
-<!-- Обо мне и CTA -->
-<div style="background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 40px; max-width: 900px; margin: 0 auto; text-align: center;">
-<h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 16px;">Немного обо мне</h3>
-<p style="color: var(--color-text-muted); max-width: 700px; margin: 0 auto 24px; line-height: 1.6;">
-25 лет в операционной логистике. Директор по логистике в ГК КНИТ и управлял внутренней логистикой производства «Арнест».
-Снизил транспортные затраты на 40%, внедрил WMS с экономией > 40 млн руб. в год.
-</p>
-<div style="display: inline-block; background: var(--color-highlight); color: #fff; padding: 8px 24px; border-radius: 50px; font-weight: 700; margin-bottom: 24px; font-size: 1.1rem;">
-⚠️ В августе беру только 3 компании
-</div>
-<p style="color: var(--color-text); font-size: 1.1rem; margin-bottom: 24px;">
-Если хотите разобраться в своей логистике, напишите мне в Telegram слово <strong style="color: var(--color-highlight);">«АУДИТ»</strong>. Обсудим детали.
-</p>
-<a href="https://t.me/zhukov_logistics?text=%D0%90%D0%A3%D0%94%D0%98%D0%A2" class="btn btn-primary" target="_blank" rel="noopener" style="font-size: 1.1rem; padding: 18px 48px;">
-Написать «АУДИТ» в Telegram
-</a>
-<p style="margin-top: 16px; color: var(--color-text-muted); font-size: 0.85rem;">
-100% конфиденциально. Без обязательств.
-</p>
-</div>
-</div>
-</section>
+            <!-- Обо мне и CTA -->
+            <div style="background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 40px; max-width: 900px; margin: 0 auto; text-align: center;">
+                <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 16px;">Немного обо мне</h3>
+                <p style="color: var(--color-text-muted); max-width: 700px; margin: 0 auto 24px; line-height: 1.6;">
+                    25 лет в операционной логистике. Директор по логистике в ГК КНИТ и управлял внутренней логистикой производства «Арнест».
+                    Снизил транспортные затраты на 40%, внедрил WMS с экономией > 40 млн руб. в год.
+                </p>
+                <div style="display: inline-block; background: var(--color-highlight); color: #fff; padding: 8px 24px; border-radius: 50px; font-weight: 700; margin-bottom: 24px; font-size: 1.1rem;">
+                    ⚠️ В августе беру только 3 компании
+                </div>
+                <p style="color: var(--color-text); font-size: 1.1rem; margin-bottom: 24px;">
+                    Если хотите разобраться в своей логистике, напишите мне в Telegram слово <strong style="color: var(--color-highlight);">«АУДИТ»</strong>. Обсудим детали.
+                </p>
+                <a href="https://t.me/zhukov_logistics?text=%D0%90%D0%A3%D0%94%D0%98%D0%A2" class="btn btn-primary" target="_blank" rel="noopener" style="font-size: 1.1rem; padding: 18px 48px;">
+                    Написать «АУДИТ» в Telegram
+                </a>
+                <p style="margin-top: 16px; color: var(--color-text-muted); font-size: 0.85rem;">
+                    100% конфиденциально. Без обязательств.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <section class="section" id="expertise">
         <div class="container">
             <span class="section-label fade-in">Область экспертизы</span>
@@ -409,8 +413,8 @@
                     <p class="service-subtitle">10 точек потерь за 3 дня</p>
                     <h4>Что вы получите</h4>
                     <p>За 3-5 дней я выявляю ключевые точки потерь на вашем складе или транспорте, оцениваю потенциальную экономию в рублях, даю дорожную карту первых изменений.</p><p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: 12px; font-style: italic;">
-    Идеально для компаний, которым нужен <strong>аудит логистики</strong> или <strong>оптимизация складских процессов</strong> перед внедрением WMS.
-</p>
+            Идеально для компаний, которым нужен <strong>аудит логистики</strong> или <strong>оптимизация складских процессов</strong> перед внедрением WMS.
+        </p>
                     <h4>Когда заказывают</h4>
                     <ul><li>«Чувствуют, что логистика дорогая, но не знают, где теряются деньги»</li><li>«Нет времени и внутренних экспертов на полный аудит»</li><li>«Хочу проверить гипотезу, что можно сэкономить 10-20%»</li></ul>
                     <div class="service-meta"><div class="service-price">150 000 — 250 000 ₽</div><div class="service-duration">Срок: 3-5 дней</div><p class="service-note">* сроки могут сдвигаться в случае задержек в предоставлении информации</p></div>
@@ -439,34 +443,19 @@
         </div>
     </section>
 
+    <!-- СЕКЦИЯ СТАТЕЙ: ТЕПЕРЬ ЗАГРУЖАЕТСЯ ИЗ articles.json -->
     <section class="section" id="articles">
         <div class="container">
             <span class="section-label fade-in">Публикации и материалы</span>
             <h2 class="section-title fade-in">Статьи и исследования</h2>
             <p class="section-subtitle fade-in">Делюсь экспертизой: разбор кейсов, аналитика и полезные материалы</p>
-            <div class="articles-grid">
-<div class="article-card fade-in">
-<div class="article-image">
-<img src="case-wms.jpg" alt="Внедрение WMS на двух РЦ">
-</div>
-<div class="article-content">
-<h3>Внедрение WMS на двух РЦ: ошибки -80%, скорость +30%</h3>
-<p>История двух запусков: первый — провал, второй — успех. Ключевой вывод: WMS — это не про софт, а про людей.</p>
-<a href="case-wms.html" class="btn btn-outline article-btn">Читать кейс</a>
-</div>
-</div>
-
-<div class="article-card fade-in">
-<div class="article-image">
-<img src="barter-presentation.jpg" alt="Бартер интересов внутри компании">
-</div>
-<div class="article-content">
-<h3>Бартер интересов внутри компании: Логистика как нервная система бизнеса</h3>
-<p>Как выстроить WIN-WIN взаимодействие между логистикой, продажами, финансами и бухгалтерией. Практическое руководство по внедрению S&OP.</p>
-<a href="barter-interesov.html" class="btn btn-outline article-btn">Читать статью</a>
-</div>
-</div>
-</div>
+            
+            <!-- Контейнер, который заполнится автоматически -->
+            <div class="articles-grid" id="articlesGrid">
+                <!-- Сюда JavaScript вставит карточки статей -->
+            </div>
+        </div>
+    </section> <!-- ИСПРАВЛЕНО: добавлен закрывающий тег section, которого не хватало -->
     
     <section class="section author-section" id="value">
         <div class="container">
@@ -566,6 +555,7 @@
     </footer>
 
     <script>
+        // 1. Стандартные скрипты навигации и анимации
         const header = document.getElementById('header');
         window.addEventListener('scroll', () => { if (window.scrollY > 50) header.classList.add('scrolled'); else header.classList.remove('scrolled'); });
         const burger = document.getElementById('burger');
@@ -575,9 +565,53 @@
         burger.addEventListener('click', () => { mobileNav.classList.add('active'); document.body.style.overflow = 'hidden'; });
         mobileNavClose.addEventListener('click', () => { mobileNav.classList.remove('active'); document.body.style.overflow = ''; });
         mobileNavLinks.forEach(link => { link.addEventListener('click', () => { mobileNav.classList.remove('active'); document.body.style.overflow = ''; }); });
+        
         const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.1 });
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
         document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { e.preventDefault(); const target = document.querySelector(this.getAttribute('href')); if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }); });
+
+        // 2. НОВЫЙ СКРИПТ: Динамическая загрузка статей из articles.json
+        async function loadArticles() {
+            try {
+                const response = await fetch('articles.json');
+                if (!response.ok) throw new Error('Не удалось загрузить articles.json');
+                const articles = await response.json();
+                const grid = document.getElementById('articlesGrid');
+                
+                // Генерируем HTML для каждой статьи
+                grid.innerHTML = articles.map(article => `
+                    <div class="article-card fade-in">
+                        <div class="article-image">
+                            <img src="${article.image}" alt="${article.title}">
+                        </div>
+                        <div class="article-content">
+                            <h3>${article.title}</h3>
+                            <p>${article.description}</p>
+                            <a href="${article.url}" class="btn btn-outline article-btn">Читать статью</a>
+                        </div>
+                    </div>
+                `).join('');
+                
+                // Перезапускаем анимацию появления (fade-in) для новых элементов
+                const newObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            newObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                document.querySelectorAll('#articlesGrid .fade-in').forEach(el => newObserver.observe(el));
+                
+            } catch (error) {
+                console.error('Ошибка загрузки статей:', error);
+                document.getElementById('articlesGrid').innerHTML = '<p style="color: var(--color-text-muted); text-align: center; grid-column: 1 / -1;">Статьи временно недоступны. Пожалуйста, обновите страницу.</p>';
+            }
+        }
+
+        // Запускаем загрузку статей после полной загрузки страницы
+        document.addEventListener('DOMContentLoaded', loadArticles);
     </script>
 </body>
 </html>
