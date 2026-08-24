@@ -5,7 +5,7 @@
 <link rel="alternate icon" href="/favicon.ico">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Бартер интересов внутри компании: Логистика как нервная система бизнеса | zhukov-logistics.ru</title>
+<title>Бартер интересов внутри компании: Логистика как нервная системы бизнеса | zhukov-logistics.ru</title>
 <meta name="description" content="Как выстроить WIN-WIN взаимодействие между логистикой, продажами, финансами и бухгалтерией. Практическое руководство по внедрению S&OP через внутренний нетворкинг.">
 <meta name="keywords" content="логистика, S&OP, взаимодействие отделов, win-win, продажи, финансы, бухгалтерия, управление цепями поставок, эффективность, консалтинг">
 <meta name="author" content="Алексей Жуков">
@@ -13,7 +13,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Бартер интересов внутри компании: Логистика как нервная система бизнеса">
 <meta property="og:description" content="Как выстроить WIN-WIN взаимодействие между логистикой и смежными отделами. Практическое руководство по внедрению S&OP.">
-<meta property="og:image" content="https://zhukov-logistics.ru/photo.jpg">
+<meta property="og:image" content="https://zhukov-logistics.ru/barter-presentation.jpg">
 <meta property="og:url" content="https://zhukov-logistics.ru/barter-interesov.html">
 <meta property="og:locale" content="ru_RU">
 <link rel="canonical" href="https://zhukov-logistics.ru/barter-interesov.html">
@@ -46,52 +46,61 @@ a:hover { color: var(--color-highlight); }
 .article { padding: 140px 0 80px; }
 .article-header { text-align: center; margin-bottom: 60px; }
 .article-title { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1.2; margin-bottom: 20px; background: linear-gradient(135deg, var(--color-text) 0%, var(--color-highlight) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.article-subtitle { font-size: 1.3rem; color: var(--color-highlight); font-weight: 600; margin-bottom: 30px; }
 .article-meta { font-size: 1rem; color: var(--color-text-muted); margin-bottom: 40px; }
-.article-intro { font-size: 1.25rem; color: var(--color-text); max-width: 800px; margin: 0 auto 40px; line-height: 1.8; }
-.article-content { max-width: 900px; margin: 0 auto; }
-.article-section { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 40px 32px; margin-bottom: 32px; transition: var(--transition); }
+.article-intro { font-size: 1.2rem; color: var(--color-text); max-width: 900px; margin: 0 auto 50px; line-height: 1.9; }
+.article-image-main { width: 100%; max-width: 1000px; margin: 0 auto 50px; border-radius: var(--radius); overflow: hidden; border: 2px solid var(--color-border); box-shadow: var(--shadow); }
+.article-image-main img { width: 100%; height: auto; display: block; }
+.article-content { max-width: 1000px; margin: 0 auto; }
+.article-section { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 48px 40px; margin-bottom: 40px; transition: var(--transition); }
 .article-section:hover { border-color: var(--color-highlight); box-shadow: var(--shadow); }
-.section-number { display: inline-block; width: 48px; height: 48px; background: var(--color-highlight); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 800; margin-bottom: 20px; }
-.article-section h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 24px; color: var(--color-text); }
-.article-section h3 { font-size: 1.2rem; font-weight: 700; margin: 24px 0 16px; color: var(--color-highlight); }
-.article-section p { font-size: 1rem; color: var(--color-text-muted); line-height: 1.8; margin-bottom: 16px; }
-.interests-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin: 24px 0; }
-.interests-col { background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 12px; padding: 24px; }
-.interests-col h4 { font-size: 1rem; font-weight: 700; margin-bottom: 16px; color: var(--color-text); }
+.section-number { display: inline-flex; width: 56px; height: 56px; background: var(--color-highlight); border-radius: 16px; align-items: center; justify-content: center; font-size: 1.6rem; font-weight: 900; margin-bottom: 24px; }
+.article-section h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 28px; color: var(--color-text); }
+.article-section h3 { font-size: 1.3rem; font-weight: 700; margin: 28px 0 18px; color: var(--color-highlight); }
+.article-section p { font-size: 1.05rem; color: var(--color-text-muted); line-height: 1.9; margin-bottom: 20px; }
+.article-section strong { color: var(--color-text); }
+.interests-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; margin: 32px 0; }
+.interests-col { background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 14px; padding: 28px; }
+.interests-col h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 20px; color: var(--color-highlight); }
 .interests-col ul { list-style: none; }
-.interests-col li { font-size: 0.9rem; color: var(--color-text-muted); padding: 8px 0; padding-left: 24px; position: relative; }
-.interests-col li::before { content: '•'; color: var(--color-highlight); position: absolute; left: 8px; font-weight: 700; }
-.winwin-box { background: linear-gradient(135deg, rgba(233, 69, 96, 0.1) 0%, rgba(15, 52, 96, 0.1) 100%); border-left: 4px solid var(--color-highlight); border-radius: 12px; padding: 28px; margin: 24px 0; }
-.winwin-box h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 20px; color: var(--color-highlight); }
-.winwin-table { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.winwin-col h5 { font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); margin-bottom: 12px; }
+.interests-col li { font-size: 0.95rem; color: var(--color-text-muted); padding: 10px 0; padding-left: 28px; position: relative; line-height: 1.6; }
+.interests-col li::before { content: '•'; color: var(--color-highlight); position: absolute; left: 10px; font-weight: 700; font-size: 1.2rem; }
+.winwin-box { background: linear-gradient(135deg, rgba(233, 69, 96, 0.1) 0%, rgba(15, 52, 96, 0.1) 100%); border-left: 5px solid var(--color-highlight); border-radius: 14px; padding: 32px; margin: 32px 0; }
+.winwin-box h4 { font-size: 1.2rem; font-weight: 800; margin-bottom: 24px; color: var(--color-highlight); }
+.winwin-table { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.winwin-col h5 { font-size: 0.95rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-muted); margin-bottom: 16px; }
 .winwin-col ul { list-style: none; }
-.winwin-col li { font-size: 0.9rem; color: var(--color-text); padding: 10px 0; padding-left: 20px; position: relative; }
-.winwin-col li::before { content: '✓'; color: #00cc66; position: absolute; left: 0; font-weight: 700; }
-.metric-box { background: var(--color-dark); border-radius: 12px; padding: 20px; margin-top: 20px; }
-.metric-box strong { color: var(--color-highlight); }
-.principle { font-size: 1.1rem; font-weight: 600; color: var(--color-text); font-style: italic; padding: 20px; background: var(--color-bg); border-radius: 12px; margin-top: 20px; text-align: center; border: 1px solid var(--color-border); }
-.implementation { background: var(--color-dark); border: 2px solid var(--color-highlight); border-radius: var(--radius); padding: 48px 40px; margin: 48px 0; }
-.implementation h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 32px; text-align: center; }
+.winwin-col li { font-size: 0.95rem; color: var(--color-text); padding: 12px 0; padding-left: 24px; position: relative; line-height: 1.6; }
+.winwin-col li::before { content: '✓'; color: #00cc66; position: absolute; left: 0; font-weight: 800; font-size: 1.1rem; }
+.metric-box { background: var(--color-dark); border-radius: 14px; padding: 24px; margin-top: 24px; border: 1px solid var(--color-border); }
+.metric-box strong { color: var(--color-highlight); font-size: 1.05rem; }
+.metric-box p { margin: 0; font-size: 0.95rem; }
+.principle { font-size: 1.15rem; font-weight: 600; color: var(--color-text); font-style: italic; padding: 24px; background: var(--color-bg); border-radius: 14px; margin-top: 28px; text-align: center; border: 2px solid var(--color-border); }
+.implementation { background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-card) 100%); border: 2px solid var(--color-highlight); border-radius: var(--radius); padding: 56px 48px; margin: 56px 0; }
+.implementation h2 { font-size: 2rem; font-weight: 900; margin-bottom: 40px; text-align: center; color: var(--color-text); }
 .implementation ol { counter-reset: item; list-style: none; }
-.implementation li { counter-increment: item; padding: 20px 20px 20px 70px; position: relative; margin-bottom: 16px; background: var(--color-card); border-radius: 12px; border-left: 4px solid var(--color-highlight); }
-.implementation li::before { content: counter(item); position: absolute; left: 20px; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; background: var(--color-highlight); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem; }
-.implementation li strong { color: var(--color-text); display: block; margin-bottom: 8px; font-size: 1.05rem; }
-.implementation li p { color: var(--color-text-muted); font-size: 0.95rem; margin: 0; }
-.conclusion { background: linear-gradient(135deg, var(--color-card) 0%, var(--color-dark) 100%); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 48px 40px; text-align: center; margin-top: 48px; }
-.conclusion h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 24px; }
-.conclusion p { font-size: 1.1rem; color: var(--color-text-muted); line-height: 1.8; max-width: 700px; margin: 0 auto 24px; }
-.hashtags { font-size: 0.9rem; color: var(--color-text-muted); margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--color-border); }
-.hashtags span { color: var(--color-highlight); }
-.back-link { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: var(--color-card); border: 1px solid var(--color-border); border-radius: 50px; margin-bottom: 40px; font-weight: 600; }
+.implementation li { counter-increment: item; padding: 24px 24px 24px 80px; position: relative; margin-bottom: 20px; background: var(--color-card); border-radius: 14px; border-left: 5px solid var(--color-highlight); }
+.implementation li::before { content: counter(item); position: absolute; left: 24px; top: 50%; transform: translateY(-50%); width: 42px; height: 42px; background: var(--color-highlight); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 1.1rem; }
+.implementation li strong { color: var(--color-text); display: block; margin-bottom: 10px; font-size: 1.1rem; font-weight: 700; }
+.implementation li p { color: var(--color-text-muted); font-size: 0.95rem; margin: 0; line-height: 1.6; }
+.conclusion { background: linear-gradient(135deg, var(--color-card) 0%, var(--color-dark) 100%); border: 2px solid var(--color-border); border-radius: var(--radius); padding: 56px 48px; text-align: center; margin-top: 56px; }
+.conclusion h2 { font-size: 1.9rem; font-weight: 900; margin-bottom: 28px; color: var(--color-text); }
+.conclusion p { font-size: 1.15rem; color: var(--color-text-muted); line-height: 1.9; max-width: 800px; margin: 0 auto 28px; }
+.conclusion-highlight { font-size: 1.3rem; font-weight: 800; color: var(--color-highlight); margin: 32px 0; padding: 24px; background: rgba(233, 69, 96, 0.1); border-radius: 14px; }
+.question { font-size: 1.1rem; color: var(--color-text); margin-top: 32px; padding-top: 32px; border-top: 2px solid var(--color-border); }
+.hashtags { font-size: 0.95rem; color: var(--color-text-muted); margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--color-border); line-height: 2; }
+.hashtags span { color: var(--color-highlight); margin-right: 12px; }
+.back-link { display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; background: var(--color-card); border: 1px solid var(--color-border); border-radius: 50px; margin-bottom: 50px; font-weight: 600; transition: var(--transition); }
 .back-link:hover { background: var(--color-card-hover); border-color: var(--color-highlight); transform: translateY(-2px); }
-.footer { background: var(--color-dark-2); border-top: 1px solid var(--color-border); padding: 40px 0; text-align: center; font-size: 0.85rem; color: var(--color-text-muted); }
+.footer { background: var(--color-dark-2); border-top: 1px solid var(--color-border); padding: 40px 0; text-align: center; font-size: 0.85rem; color: var(--color-text-muted); margin-top: 80px; }
 @media (max-width: 900px) {
 .nav { display: none; } .burger { display: flex; }
 .article { padding: 120px 0 60px; }
-.article-section { padding: 28px 20px; }
+.article-section { padding: 32px 24px; }
 .winwin-table { grid-template-columns: 1fr; }
-.implementation li { padding: 16px 16px 16px 60px; }
+.interests-grid { grid-template-columns: 1fr; }
+.implementation { padding: 36px 24px; }
+.implementation li { padding: 18px 18px 18px 65px; }
 }
 </style>
 </head>
@@ -116,17 +125,20 @@ a:hover { color: var(--color-highlight); }
 
 <div class="article-header">
 <h1 class="article-title">Бартер интересов внутри компании</h1>
-<p class="article-meta">Логистика — как нервная система бизнеса</p>
-<p class="article-intro">
-Логистика — это не «склад и машины», это нервная система компании, которая связывает продажи, финансы, бухгалтерию и собственников. Но часто логистика воспринимается как «служба, которая только тратит деньги», а её запросы игнорируются.
-</p>
+<p class="article-subtitle">Логистика — как нервная система бизнеса</p>
+</div>
+
+<div class="article-image-main">
+<img src="barter-presentation.jpg" alt="Бартер интересов внутри компании - схема взаимодействия логистики с отделами">
+</div>
+
+<div class="article-intro">
+<p><strong>Логистика — это не «склад и машины»</strong>, это нервная система компании, которая связывает продажи, финансы, бухгалтерию и собственников. Но часто логистика воспринимается как «служба, которая только тратит деньги», а её запросы игнорируются.</p>
+<p style="margin-top: 20px;">В компаниях с выручкой более <strong>2 млрд ₽ в год</strong> наладить взаимодействие без системы невозможно. S&OP (Sales & Operations Planning) — это один из лучших процессов, но его нельзя «внедрить приказом». Сначала нужно выстроить взаимовыгодные контакты между отделами. Без них S&OP останется формальной встречей, где каждый тянет одеяло на себя.</p>
+<p style="margin-top: 20px; font-size: 1.2rem; color: var(--color-highlight);"><strong>Внутренний логистический нетворкинг</strong> — это там, где логистика и смежные отделы строят отношения по принципу <strong>«WIN‑WIN»</strong>!</p>
 </div>
 
 <div class="article-content">
-<div class="article-section">
-<p><strong>В компаниях с выручкой более 2 млрд ₽ в год</strong> наладить взаимодействие без системы невозможно. S&OP (Sales & Operations Planning) — это один из лучших процессов, но его нельзя «внедрить приказом». Сначала нужно выстроить взаимовыгодные контакты между отделами. Без них S&OP останется формальной встречей, где каждый тянет одеяло на себя.</p>
-<p style="margin-top: 20px; font-size: 1.1rem; color: var(--color-text);"><strong>Внутренний логистический нетворкинг</strong> — это там, где логистика и смежные отделы строят отношения по принципу <strong style="color: var(--color-highlight);">«WIN‑WIN»</strong>!</p>
-</div>
 
 <div class="article-section">
 <div class="section-number">1</div>
@@ -134,7 +146,7 @@ a:hover { color: var(--color-highlight); }
 
 <div class="interests-grid">
 <div class="interests-col">
-<h4 style="color: var(--color-highlight);">Интересы продаж:</h4>
+<h4>Интересы продаж:</h4>
 <ul>
 <li>Быстрая отгрузка</li>
 <li>Минимальный дефицит (скорость пополнения)</li>
@@ -142,7 +154,7 @@ a:hover { color: var(--color-highlight); }
 </ul>
 </div>
 <div class="interests-col">
-<h4 style="color: var(--color-highlight);">Интересы логистики:</h4>
+<h4>Интересы логистики:</h4>
 <ul>
 <li>Прогнозируемый поток заказов (без резких пиков)</li>
 <li>Время на подготовку товара</li>
@@ -152,12 +164,12 @@ a:hover { color: var(--color-highlight); }
 </div>
 
 <div class="winwin-box">
-<h4>🤝 Обмен интересами с условием WIN‑WIN</h4>
+<h4> Обмен интересами с условием WIN‑WIN</h4>
 <div class="winwin-table">
 <div class="winwin-col">
 <h5>Что даёт логистика:</h5>
 <ul>
-<li>Снижение стоимости комплектации (на 5–10%)</li>
+<li>Снижение стоимости комплектации (например, на 5–10%)</li>
 <li>Приоритетная обработка срочных заказов (при предупреждении)</li>
 <li>Гарантированные сроки отгрузки (если заявка подана вовремя)</li>
 </ul>
@@ -174,4 +186,259 @@ a:hover { color: var(--color-highlight); }
 </div>
 
 <div class="metric-box">
-<strong>📊 Ключевая метрика:</strong> % заявок, поданных с нарушением регламента. Если >20% —
+<strong>📊 Ключевая метрика:</strong> % заявок, поданных с нарушением регламента. Если >20% — логистика вынуждена работать в авральном режиме, что ведёт к ошибкам и штрафам. Продажи теряют репутацию, логистика — деньги.
+</div>
+
+<div class="principle">
+«Мы даём вам скорость и гибкость, но взамен просим вас давать нам время и информацию»
+</div>
+</div>
+
+<div class="article-section">
+<div class="section-number">2</div>
+<h2>Логистика ↔ Финансовый отдел</h2>
+
+<div class="interests-grid">
+<div class="interests-col">
+<h4>Интересы финансов:</h4>
+<ul>
+<li>Снижение затрат</li>
+<li>Прогнозируемые расходы</li>
+<li>Контроль бюджетов</li>
+</ul>
+</div>
+<div class="interests-col">
+<h4>Интересы логистики:</h4>
+<ul>
+<li>Стабильное финансирование (без резких сокращений)</li>
+<li>Инвестиции в автоматизацию (WMS, TMS, аналитика)</li>
+<li>Время на внедрение изменений</li>
+</ul>
+</div>
+</div>
+
+<div class="winwin-box">
+<h4> Обмен интересами с условием WIN‑WIN</h4>
+<div class="winwin-table">
+<div class="winwin-col">
+<h5>Что даёт логистика:</h5>
+<ul>
+<li>Ежемесячный отчёт о затратах с прогнозом на 3 месяца</li>
+<li>Снижение удельной стоимости логистики на единицу товара</li>
+<li>Точное исполнение бюджета (отклонение <3%)</li>
+<li>Контракты с отсрочкой платежей</li>
+</ul>
+</div>
+<div class="winwin-col">
+<h5>Что логистика просит взамен:</h5>
+<ul>
+<li>Финансы не «держат» платежи контрагентам</li>
+<li>Помогают в обосновании бюджета на автоматизацию (с ROI-моделью)</li>
+<li>Финансы не блокируют инвестиции в IT-системы (WMS, TMS, аналитику)</li>
+<li>Финансы дают «защищённую, приоритетную» статью на оплату 3PL в пиковые сезоны</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="metric-box">
+<strong>📊 Ключевая метрика:</strong> отклонение факта от бюджета. Если логистика регулярно укладывается в ±3%, финансы начинают доверять и перестают требовать жёстких сокращений каждый квартал.
+</div>
+
+<div class="principle">
+«Мы даём вам предсказуемость и контроль, вы даёте нам ресурсы для развития»
+</div>
+</div>
+
+<div class="article-section">
+<div class="section-number">3</div>
+<h2>Логистика ↔ Бухгалтерия</h2>
+
+<div class="interests-grid">
+<div class="interests-col">
+<h4>Интересы бухгалтерии:</h4>
+<ul>
+<li>Своевременные и правильно оформленные документы</li>
+<li>Минимум ошибок в проводках</li>
+<li>Отсутствие расхождений между учётом и фактом</li>
+</ul>
+</div>
+<div class="interests-col">
+<h4>Интересы логистики:</h4>
+<ul>
+<li>Быстрое закрытие периодов (без задержек из-за проверки документов)</li>
+<li>Минимум согласований по мелким отклонениям</li>
+<li>Понятный механизм списания потерь (брак, возвраты)</li>
+</ul>
+</div>
+</div>
+
+<div class="winwin-box">
+<h4>🤝 Обмен интересами с условием WIN‑WIN</h4>
+<div class="winwin-table">
+<div class="winwin-col">
+<h5>Что даёт логистика:</h5>
+<ul>
+<li>Электронный документооборот с перевозчиками</li>
+<li>Автоматическая передача данных из WMS, TMS в учётную систему</li>
+<li>Своевременное закрытие склада и отчётность</li>
+<li>Своевременную передачу бумажных документов в бухгалтерию</li>
+<li>Заполнение документации в соответствии с законодательством</li>
+</ul>
+</div>
+<div class="winwin-col">
+<h5>Что логистика просит взамен:</h5>
+<ul>
+<li>Бухгалтерия согласовывает шаблоны документации (актов, ТТН, ТН и т.п.) заранее</li>
+<li>Бухгалтерия проводит списания в день инвентаризации</li>
+<li>Бухгалтерия упрощает процедуру приёма мелких расхождений (до 1%)</li>
+<li>Согласование «реальных» сроков предоставления документации</li>
+<li>Своевременное предоставление информации о изменении законодательства и составлении инструкций</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="metric-box">
+<strong> Ключевая метрика:</strong> количество ошибок в документах и задержек с закрытием периода. Чем меньше — тем выше доверие.
+</div>
+
+<div class="principle">
+«Мы даём вам корректные данные и скорость, вы даёте нам предсказуемый процесс списаний и закрытия месяца»
+</div>
+</div>
+
+<div class="article-section">
+<div class="section-number">4</div>
+<h2>Логистика ↔ Собственники / CEO</h2>
+
+<div class="interests-grid">
+<div class="interests-col">
+<h4>Интересы собственников:</h4>
+<ul>
+<li>Рост эффективности бизнеса</li>
+<li>Снижение издержек</li>
+<li>Высокий уровень сервиса для клиентов</li>
+</ul>
+</div>
+<div class="interests-col">
+<h4>Интересы логистики:</h4>
+<ul>
+<li>Понимание стратегии компании (куда расти, какие каналы развивать)</li>
+<li>Инвестиции в логистическую инфраструктуру</li>
+<li>Признание логистики как драйвера прибыли, а не «расходной статьи»</li>
+</ul>
+</div>
+</div>
+
+<div class="winwin-box">
+<h4>🤝 Обмен интересами с условием WIN‑WIN</h4>
+<div class="winwin-table">
+<div class="winwin-col">
+<h5>Что даёт логистика:</h5>
+<ul>
+<li>Отчёт, где логистика представлена как P&L-центр (с ROI на каждый вложенный рубль)</li>
+<li>Снижение издержек на 10–20% при росте объёмов</li>
+<li>Прозрачная система KPI для всей логистики</li>
+</ul>
+</div>
+<div class="winwin-col">
+<h5>Что логистика просит взамен:</h5>
+<ul>
+<li>Собственники включают логистику в стратегические сессии (не только когда что-то сломалось)</li>
+<li>Инвестиции в IT-инфраструктуру и склады</li>
+<li>Собственники не принимают решения о логистике без участия руководителя логистики</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="metric-box">
+<strong> Ключевая метрика:</strong> логистика должна говорить на языке бизнеса — не «мы сэкономили 5 млн», а «мы увеличили маржинальность на 2%». Тогда собственники начинают воспринимать логистику как партнёра.
+</div>
+
+<div class="principle">
+«Мы даём вам эффективность и прозрачность, вы даёте нам стратегический статус и ресурсы»
+</div>
+</div>
+
+<div class="implementation">
+<h2> Как это внедрить: пошаговый план</h2>
+<ol>
+<li>
+<strong>Встретиться с каждым отделом отдельно</strong>
+<p>«Продать» выгоду обмена win‑win. <strong>Срок: 1–2 недели</strong></p>
+</li>
+<li>
+<strong>Зафиксировать договорённости в виде предварительных регламентов</strong>
+<p>Например, «Подача заявок за 12 часов». <strong>Срок: 2–3 недели</strong></p>
+</li>
+<li>
+<strong>Назначить ответственных за контроль исполнения</strong>
+<p>От логистики и от смежного отдела. <strong>На старте</strong></p>
+</li>
+<li>
+<strong>Ежемесячно проводить «разбор полётов»</strong>
+<p>Что работает, что нет, корректировать регламенты. <strong>Постоянно</strong></p>
+</li>
+<li>
+<strong>Построить S&OP как регулярный процесс</strong>
+<p>Сначала раз в месяц, потом еженедельно. <strong>Через 1–2 месяца</strong> после внедрения регламентов</p>
+</li>
+</ol>
+</div>
+
+<div class="conclusion">
+<h2>🎯 Что в итоге?</h2>
+<p>S&OP — это не магия, а результат системной работы. Но до того, как вы соберёте всех за одним столом, нужно, чтобы каждый отдел увидел выгоду от взаимодействия с логистикой.</p>
+<div class="conclusion-highlight">
+Сначала — WIN-WIN.<br>
+Потом — регламенты.<br>
+Потом — S&OP.
+</div>
+<p>Если вы пытаетесь внедрить S&OP без предварительных договорённостей, отделы будут приходить на встречи с готовностью защищать свои интересы, а не искать общее решение. Результат — формальные встречи, которые ни к чему не ведут.</p>
+<div class="question">
+<strong>Вопрос к вам:</strong> как сейчас устроено взаимодействие логистики с продажами, финансами и бухгалтерией в вашей компании? Где самые болезненные точки и где легче всего договориться? 👇
+</div>
+<div class="hashtags">
+<strong>Хештеги:</strong><br>
+<span>#логистика</span>
+<span>#SOP</span>
+<span>#управлениецепямипоставок</span>
+<span>#взаимодействие</span>
+<span>#продажи</span>
+<span>#финансы</span>
+<span>#бухгалтерия</span>
+<span>#winwin</span>
+<span>#эффективность</span>
+<span>#консалтинг</span>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<footer class="footer">
+<div class="container">
+<p>&copy; 2024 Алексей Жуков. Консалтинг в логистике. Все права защищены.</p>
+</div>
+</footer>
+
+<script>
+const burger = document.getElementById('burger');
+const mobileNav = document.querySelector('.nav');
+burger.addEventListener('click', () => { 
+    mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex';
+    mobileNav.style.position = 'absolute';
+    mobileNav.style.top = '100%';
+    mobileNav.style.left = '0';
+    mobileNav.style.right = '0';
+    mobileNav.style.background = 'var(--color-bg)';
+    mobileNav.style.flexDirection = 'column';
+    mobileNav.style.padding = '20px';
+    mobileNav.style.borderTop = '1px solid var(--color-border)';
+});
+</script>
+</body>
+</html>
