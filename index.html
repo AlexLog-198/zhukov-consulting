@@ -143,11 +143,81 @@
     .section-subtitle { font-size: 1.1rem; color: var(--color-text-muted); margin-bottom: 60px; max-width: 700px; }
     .section-label { display: inline-block; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-highlight); margin-bottom: 12px; }
     
-    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 32px; border-radius: 50px; font-size: 0.95rem; font-weight: 600; cursor: pointer; border: none; transition: var(--transition); text-decoration: none; }
+    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 32px; border-radius: 50px; font-size: 0.95rem; font-weight: 600; cursor: pointer; border: none; transition: var(--transition); text-decoration: none; font-family: inherit; }
     .btn-primary { background: var(--color-highlight); color: #0f172a; }
     .btn-primary:hover { background: #0d9488; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(20, 184, 166, 0.25); }
     .btn-outline { background: transparent; color: var(--color-text); border: 2px solid var(--color-border); }
     .btn-outline:hover { border-color: var(--color-highlight); color: var(--color-highlight); transform: translateY(-2px); }
+    
+    /* ========== DROPDOWN МЕНЮ ========== */
+    .contact-dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .contact-dropdown .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .dropdown-arrow {
+        font-size: 0.7em;
+        transition: transform var(--transition);
+    }
+    .contact-dropdown.open .dropdown-arrow {
+        transform: rotate(180deg);
+    }
+    .dropdown-menu {
+        position: absolute;
+        top: calc(100% + 8px);
+        right: 0;
+        background: var(--color-dark);
+        border: 1px solid var(--color-border);
+        border-radius: 12px;
+        padding: 8px;
+        min-width: 220px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition: var(--transition);
+        z-index: 1001;
+        box-shadow: var(--shadow);
+    }
+    .contact-dropdown.open .dropdown-menu,
+    .contact-dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    .dropdown-menu a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: var(--color-text);
+        transition: background var(--transition);
+    }
+    .dropdown-menu a:hover {
+        background: var(--color-card-hover);
+        color: var(--color-highlight);
+    }
+    .dropdown-menu a .icon {
+        font-size: 1.2rem;
+        width: 24px;
+        text-align: center;
+    }
+    .dropdown-menu a .label {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.3;
+    }
+    .dropdown-menu a .label small {
+        font-size: 0.75rem;
+        color: var(--color-text-muted);
+        font-weight: 400;
+    }
     
     .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 16px 0; transition: var(--transition); }
     .header.scrolled { background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--color-border); }
@@ -160,10 +230,45 @@
     .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
     .burger span { width: 24px; height: 2px; background: var(--color-text); transition: var(--transition); border-radius: 2px; }
     
-    .mobile-nav { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--color-bg); z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 32px; opacity: 0; pointer-events: none; transition: var(--transition); }
+    .mobile-nav { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--color-bg); z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 24px; opacity: 0; pointer-events: none; transition: var(--transition); overflow-y: auto; padding: 40px 24px; }
     .mobile-nav.active { opacity: 1; pointer-events: all; }
-    .mobile-nav a { font-size: 1.4rem; font-weight: 600; }
+    .mobile-nav a { font-size: 1.3rem; font-weight: 600; }
     .mobile-nav-close { position: absolute; top: 24px; right: 24px; font-size: 2rem; cursor: pointer; color: var(--color-text); }
+    
+    .mobile-contact-group {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        max-width: 320px;
+        margin-top: 16px;
+        padding-top: 24px;
+        border-top: 1px solid var(--color-border);
+    }
+    .mobile-contact-group .contact-label {
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: var(--color-text-muted);
+        text-align: center;
+        margin-bottom: 4px;
+    }
+    .mobile-contact-group a {
+        font-size: 1rem;
+        padding: 12px 20px;
+        background: var(--color-dark);
+        border: 1px solid var(--color-border);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        justify-content: center;
+    }
+    .mobile-contact-group a:hover {
+        border-color: var(--color-highlight);
+        color: var(--color-highlight);
+    }
     
     .hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; }
     .hero::before { content: ''; position: absolute; top: -50%; right: -30%; width: 80%; height: 150%; background: radial-gradient(ellipse, rgba(20, 184, 166, 0.06) 0%, transparent 60%); pointer-events: none; }
@@ -243,6 +348,64 @@
     .event-card:hover .event-card-play { background: var(--color-highlight); color: #0f172a; }
     .event-card h3 { font-size: 1rem; font-weight: 600; line-height: 1.5; }
     
+    /* ========== СЕКЦИЯ КОНТАКТОВ ========== */
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+        margin-bottom: 48px;
+    }
+    .contact-card {
+        background: var(--color-card);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius);
+        padding: 36px 28px;
+        text-align: center;
+        transition: var(--transition);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    .contact-card:hover {
+        background: var(--color-card-hover);
+        transform: translateY(-4px);
+        box-shadow: var(--shadow);
+        border-color: var(--color-highlight);
+    }
+    .contact-card-icon {
+        width: 64px;
+        height: 64px;
+        background: var(--color-highlight-dim);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+        transition: var(--transition);
+    }
+    .contact-card:hover .contact-card-icon {
+        background: var(--color-highlight);
+        color: #0f172a;
+    }
+    .contact-card h3 {
+        font-size: 1.15rem;
+        font-weight: 700;
+        margin: 0;
+    }
+    .contact-card p {
+        font-size: 0.95rem;
+        color: var(--color-text-muted);
+        margin: 0;
+        word-break: break-word;
+    }
+    .contact-card .contact-hint {
+        font-size: 0.8rem;
+        color: var(--color-text-muted);
+        opacity: 0.7;
+    }
+    
     .author-section { background: var(--color-dark); }
     .author-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 60px 48px; text-align: center; max-width: 700px; margin: 0 auto; }
     .author-avatar { width: 100px; height: 100px; background: linear-gradient(135deg, var(--color-highlight), #0d9488); border-radius: 50%; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; font-size: 2.4rem; font-weight: 800; color: #0f172a; }
@@ -272,6 +435,7 @@
         .hero-buttons .btn { width: 100%; max-width: 320px; justify-content: center; }
         .hero-image img { max-width: 280px; } .services-grid, .articles-grid, .expertise-grid { grid-template-columns: 1fr; }
         .author-card { padding: 40px 24px; } .expertise-intro { padding: 28px 24px; }
+        .contact-grid { grid-template-columns: 1fr; }
     }
 </style>
 </head>
@@ -285,7 +449,27 @@
             <a href="#services">Услуги</a>
             <a href="#articles">Публикации</a>
             <a href="#events">Выступления</a>
-            <a href="https://t.me/zhukov_logistics" class="btn btn-primary" target="_blank" rel="noopener">Написать</a>
+            <a href="#contacts">Контакты</a>
+            <div class="contact-dropdown" id="contactDropdown">
+                <button class="btn btn-primary" id="contactBtn" type="button">
+                    Написать
+                    <span class="dropdown-arrow">▼</span>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="https://t.me/zhukov_logistics" target="_blank" rel="noopener">
+                        <span class="icon">✈️</span>
+                        <span class="label">Telegram<small>@zhukov_logistics</small></span>
+                    </a>
+                    <a href="https://max.ru/" target="_blank" rel="noopener">
+                        <span class="icon">💬</span>
+                        <span class="label">Max<small>Открыть Max</small></span>
+                    </a>
+                    <a href="mailto:alexlogistic.optimize@gmail.com">
+                        <span class="icon">✉️</span>
+                        <span class="label">Email<small>alexlogistic.optimize@gmail.com</small></span>
+                    </a>
+                </div>
+            </div>
         </nav>
         <div class="burger" id="burger"><span></span><span></span><span></span></div>
     </div>
@@ -298,7 +482,13 @@
     <a href="#services" class="mobile-nav-link">Услуги</a>
     <a href="#articles" class="mobile-nav-link">Публикации</a>
     <a href="#events" class="mobile-nav-link">Выступления</a>
-    <a href="https://t.me/zhukov_logistics" class="btn btn-primary" target="_blank" rel="noopener">Написать в Telegram</a>
+    <a href="#contacts" class="mobile-nav-link">Контакты</a>
+    <div class="mobile-contact-group">
+        <div class="contact-label">Связаться со мной</div>
+        <a href="https://t.me/zhukov_logistics" target="_blank" rel="noopener">✈️ Telegram</a>
+        <a href="https://max.ru/" target="_blank" rel="noopener">💬 Max</a>
+        <a href="mailto:alexlogistic.optimize@gmail.com">✉️ Email</a>
+    </div>
 </div>
 
 <section class="hero">
@@ -316,7 +506,7 @@
             </div>
             <div class="hero-buttons">
                 <a href="https://t.me/zhukov_logistics" class="btn btn-primary" target="_blank" rel="noopener">Написать в Telegram</a>
-                <a href="https://t.me/zhukov_logistics" class="btn btn-outline" target="_blank" rel="noopener">Бесплатная 30-минутная диагностика</a>
+                <a href="#contacts" class="btn btn-outline">Все способы связи</a>
             </div>
         </div>
         <div class="hero-image">
@@ -700,6 +890,53 @@
     </div>
 </section>
 
+<!-- НОВАЯ СЕКЦИЯ: КОНТАКТЫ -->
+<section class="section" id="contacts" style="background: var(--color-dark);">
+    <div class="container">
+        <span class="section-label fade-in">Контакты</span>
+        <h2 class="section-title fade-in">Свяжитесь со мной удобным способом</h2>
+        <p class="section-subtitle fade-in">Отвечаю в течение 2-4 часов в рабочее время. Для срочных вопросов — Telegram.</p>
+        
+        <div class="contact-grid">
+            <a href="https://t.me/zhukov_logistics" class="contact-card fade-in" target="_blank" rel="noopener">
+                <div class="contact-card-icon">✈️</div>
+                <h3>Telegram</h3>
+                <p>@zhukov_logistics</p>
+                <span class="contact-hint">Самый быстрый способ связи</span>
+            </a>
+            <a href="https://https://max.ru/u/f9LHodD0cOIf1RBQ4Xrt-V8LqExu1HFcYU0Gfwa_buWDQtvNfbgli8Z72Ms/" class="contact-card fade-in" target="_blank" rel="noopener">
+                <div class="contact-card-icon">💬</div>
+                <h3>Max</h3>
+                <p>Открыть Max</p>
+                <span class="contact-hint">Для пользователей Max</span>
+            </a>
+            <a href="mailto:alexlogistic.optimize@gmail.com" class="contact-card fade-in">
+                <div class="contact-card-icon">✉️</div>
+                <h3>Email</h3>
+                <p>alexlogistic.optimize@gmail.com</p>
+                <span class="contact-hint">Для детальных запросов</span>
+            </a>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--color-border);">
+            <div class="fade-in">
+                <div style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-muted); margin-bottom: 12px;">Телефон</div>
+                <a href="tel:+79614845592" style="font-size: 1.1rem; font-weight: 600;">+7 961 484 55 92</a>
+            </div>
+            <div class="fade-in">
+                <div style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-muted); margin-bottom: 12px;">Локация</div>
+                <p style="font-size: 1.05rem;">Санкт-Петербург, Россия</p>
+                <span style="font-size: 0.85rem; color: var(--color-text-muted);">Работаю по всему ЕАЭС</span>
+            </div>
+            <div class="fade-in">
+                <div style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-muted); margin-bottom: 12px;">Режим работы</div>
+                <p style="font-size: 1.05rem;">Пн-Пт: 09:00 - 19:00</p>
+                <span style="font-size: 0.85rem; color: var(--color-text-muted);">Сб-Вс: выходной</span>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="section author-section">
     <div class="container">
         <div class="author-card fade-in">
@@ -707,8 +944,9 @@
             <h2 class="author-name">Жуков Алексей</h2>
             <p class="author-role">Независимый эксперт в логистике</p>
             <p class="author-text">Откликаюсь только на задачи, где могу реально помочь. Если не подхожу — скажу честно. Клиенты доверяют мне в самых сложных вопросах, потому что знают, что получат честный и качественный результат. Работаю по всему ЕАЭС.</p>
-            <div style="margin-top: 32px;">
-                <a href="https://t.me/zhukov_logistics" class="btn btn-primary" target="_blank" rel="noopener">Связаться со мной</a>
+            <div style="margin-top: 32px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
+                <a href="https://t.me/zhukov_logistics" class="btn btn-primary" target="_blank" rel="noopener">Связаться через Telegram</a>
+                <a href="#contacts" class="btn btn-outline">Все способы связи</a>
             </div>
         </div>
     </div>
@@ -735,6 +973,7 @@
                 <a href="#services">Услуги</a>
                 <a href="#articles">Публикации</a>
                 <a href="#events">Выступления</a>
+                <a href="#contacts">Контакты</a>
             </div>
             <div class="footer-col">
                 <h4>География работы</h4>
@@ -749,8 +988,11 @@
 </footer>
 
 <script>
+    // Хедер при скролле
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => { if (window.scrollY > 50) header.classList.add('scrolled'); else header.classList.remove('scrolled'); });
+    
+    // Мобильное меню
     const burger = document.getElementById('burger');
     const mobileNav = document.getElementById('mobileNav');
     const mobileNavClose = document.getElementById('mobileNavClose');
@@ -759,10 +1001,44 @@
     mobileNavClose.addEventListener('click', () => { mobileNav.classList.remove('active'); document.body.style.overflow = ''; });
     mobileNavLinks.forEach(link => { link.addEventListener('click', () => { mobileNav.classList.remove('active'); document.body.style.overflow = ''; }); });
     
+    // Dropdown меню для кнопки "Написать"
+    const contactDropdown = document.getElementById('contactDropdown');
+    const contactBtn = document.getElementById('contactBtn');
+    
+    // Клик по кнопке открывает/закрывает dropdown
+    contactBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        contactDropdown.classList.toggle('open');
+    });
+    
+    // Клик вне dropdown закрывает его
+    document.addEventListener('click', (e) => {
+        if (!contactDropdown.contains(e.target)) {
+            contactDropdown.classList.remove('open');
+        }
+    });
+    
+    // Закрытие dropdown при клике на ссылку внутри
+    contactDropdown.querySelectorAll('.dropdown-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            contactDropdown.classList.remove('open');
+        });
+    });
+    
+    // Intersection Observer для анимаций
     const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { e.preventDefault(); const target = document.querySelector(this.getAttribute('href')); if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }); });
+    
+    // Плавный скролл к якорям
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => { 
+        anchor.addEventListener('click', function (e) { 
+            e.preventDefault(); 
+            const target = document.querySelector(this.getAttribute('href')); 
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' }); 
+        }); 
+    });
 
+    // Загрузка статей
     async function loadArticles() {
     try {
         const response = await fetch('articles.json');
