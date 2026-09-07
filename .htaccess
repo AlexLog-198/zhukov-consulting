@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# Перенаправляем http на https
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Перенаправляем www на без www
+RewriteCond %{HTTP_HOST} ^www\.zhukov-logistics\.ru [NC]
+RewriteRule ^(.*)$ https://zhukov-logistics.ru/$1 [L,R=301]
+
+# Перенаправляем index.html на корень
+RewriteRule ^index\.html$ / [L,R=301]
