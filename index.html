@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <script>
+// Редирект с /index.html на /
+if (window.location.pathname === '/index.html' || window.location.pathname.endsWith('/index.html')) {
+    window.location.replace(window.location.pathname.replace('/index.html', '/'));
+}
+</script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="alternate icon" href="/favicon.ico">
 <meta name="google-site-verification" content="fO6_sl32gks3uYWe4sfaYuc7zMtuCsvfWEZJOt0uT4c" />
